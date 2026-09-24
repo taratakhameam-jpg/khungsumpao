@@ -319,3 +319,104 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 })();
+
+
+/* ========================================================
+   CAROUSEL & LIGHTBOX CONTROLLER
+   ======================================================== */
+(function initCarousel() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot-btn');
+    const prevBtn = document.getElementById('carouselPrevBtn');
+    const nextBtn = document.getElementById('carouselNextBtn');
+    const wrapper = document.getElementById('heroCarousel');
+    let autoInterval = null;
+
+    if (!slides.length) return;
+
+    function goToSlide(n) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        
+        currentSlide = (n + slides.length) % slides.length;
+        
+        slides[currentSlide].classList.add('active');
+        if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+    }
+
+    function next() {
+        goToSlide(currentSlide + 1);
+    }
+
+    function prev() {
+        goToSlide(currentSlide - 1);
+    }
+
+    function startAuto() {
+        stopAuto();
+        autoInterval = setInterval(next, 4500);
+    }
+
+    function stopAuto() {
+        if (autoInterval) {
+            clearInterval(autoInterval);
+            autoInterval = null;
+        }
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { prev(); startAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { next(); startAuto(); });
+
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+            goToSlide(idx);
+            startAuto();
+        });
+    });
+
+    if (wrapper) {
+        wrapper.addEventListener('mouseenter', stopAuto);
+        wrapper.addEventListener('mouseleave', startAuto);
+
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        wrapper.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        wrapper.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) next();
+            if (touchEndX - touchStartX > 50) prev();
+        }, { passive: true });
+    }
+
+    startAuto();
+})();
+
+// Lightbox functions (global)
+window.openLightbox = function(src, caption) {
+    const modal = document.getElementById('imageLightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCaption');
+    if (modal && img) {
+        img.src = src;
+        if (cap) cap.textContent = caption || '';
+        modal.classList.add('active');
+    }
+};
+
+window.closeLightbox = function(e) {
+    const modal = document.getElementById('imageLightboxModal');
+    if (modal && (!e || e.target === modal || e.target.classList.contains('lightbox-close'))) {
+        modal.classList.remove('active');
+    }
+};
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        window.closeLightbox();
+    }
+});

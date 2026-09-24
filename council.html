@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คณะผู้บริหารและสมาชิกสภาเทศบาลตำบลคุ้งสำเภา | เทศบาลตำบลคุ้งสำเภา อำเภอมโนรมย์ จังหวัดชัยนาท</title>
+    <meta name="description" content="ทำเนียบคณะผู้บริหาร สมาชิกสภาเทศบาล และผู้นำท้องถิ่นตำบลคุ้งสำเภา อำเภอมโนรมย์ จังหวัดชัยนาท">
+    
+    <!-- Google Fonts: Prompt & Kanit (Modern, Friendly, Accessible) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Core & Civic Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-theme="light">
+
+    <!-- 1. Government Standard Accessibility Bar (WCAG 2.1 AA) -->
+    <div class="accessibility-bar" role="region" aria-label="แถบอำนวยความสะดวกการเข้าถึง">
+        <div class="container access-container">
+            <div class="access-tools-left">
+                <span class="access-label"><i class="fa-solid fa-universal-access"></i> สิ่งอำนวยความสะดวก:</span>
+                <div class="btn-group-access" role="group" aria-label="ปรับขนาดตัวอักษร">
+                    <button type="button" class="btn-access" id="font-decrease" title="ลดขนาดตัวอักษร">A-</button>
+                    <button type="button" class="btn-access active" id="font-reset" title="ขนาดตัวอักษรปกติ">A</button>
+                    <button type="button" class="btn-access" id="font-increase" title="เพิ่มขนาดตัวอักษร">A+</button>
+                </div>
+                <div class="btn-group-access" role="group" aria-label="โหมดการแสดงผล">
+                    <button type="button" class="btn-access" id="theme-default" title="โหมดสีปกติ"><i class="fa-solid fa-circle text-primary"></i> ปกติ</button>
+                    <button type="button" class="btn-access" id="theme-contrast" title="โหมดคอนทราสต์สูง (ขาว-ดำ)"><i class="fa-solid fa-circle-half-stroke"></i> คมชัดสูง</button>
+                    <button type="button" class="btn-access" id="theme-mourning" title="โหมดไว้อาลัย (ขาวดำ)"><i class="fa-solid fa-ribbon"></i> ไว้อาลัย</button>
+                </div>
+            </div>
+            <div class="access-tools-right">
+                <span class="lang-switch"><a href="index.html" class="active">TH</a> | <a href="#">EN</a></span>
+                <span class="gov-secure-badge"><i class="fa-solid fa-shield-halved"></i> เว็บไซต์ทางการเทศบาลตำบลคุ้งสำเภา</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Civic Branding & Masthead Header -->
+    <header class="header-masthead">
+        <div class="container masthead-container">
+            <div class="brand-wrapper">
+                <a href="index.html" class="brand-logo-link">
+                    <img src="assets/images/logo.png" alt="ตราสัญลักษณ์เทศบาลตำบลคุ้งสำเภา" class="official-logo-img">
+                </a>
+                <div class="brand-titles">
+                    <h1 class="brand-title">เทศบาลตำบลคุ้งสำเภา</h1>
+                    <span class="brand-subtitle">อำเภอมโนรมย์ จังหวัดชัยนาท • Kueng Samphao Sub-District Municipality</span>
+                    <span class="brand-tagline"><i class="fa-solid fa-quote-left text-gold"></i> เมืองน่าอยู่ คุณภาพชีวิตได้มาตรฐาน ยึดหลักธรรมาภิบาล ก้าวทันเทคโนโลยีดิจิทัล</span>
+                </div>
+            </div>
+            <div class="header-utility-badges">
+                <div class="ita-badge-card">
+                    <div class="ita-badge-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="ita-badge-info">
+                        <span class="badge-title">ITA Standard Portal</span>
+                        <span class="badge-desc">เกณฑ์ประเมิน OIT O1-O43</span>
+                    </div>
+                </div>
+                <div class="emergency-call-card">
+                    <div class="emergency-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                    <div class="emergency-info">
+                        <span class="call-label">สายตรงเทศบาล / แจ้งเหตุ</span>
+                        <a href="tel:056491325" class="call-number">056-491-325</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Main Navigation Bar -->
+    <nav class="main-nav" id="mainNav">
+        <div class="container nav-container">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="เปิดเมนู">
+                <i class="fa-solid fa-bars"></i> เมนูหลัก
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item "><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> หน้าหลัก</a></li>
+                <li class="nav-item has-dropdown ">
+                    <a href="about.html" class="nav-link">เกี่ยวกับเทศบาล <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html#history"><i class="fa-solid fa-landmark"></i> ประวัติเทศบาลตำบลคุ้งสำเภา</a></li>
+                        <li><a href="about.html#info"><i class="fa-solid fa-circle-info"></i> ข้อมูลทั่วไปและสภาพพื้นที่</a></li>
+                        <li><a href="about.html#vision"><i class="fa-solid fa-bullseye"></i> วิสัยทัศน์และพันธกิจ</a></li>
+                        <li><a href="about.html#duties"><i class="fa-solid fa-scale-balanced"></i> อำนาจหน้าที่ตามกฎหมาย</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown active">
+                    <a href="council.html" class="nav-link">ผู้บริหาร & สภา <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="council.html#executives"><i class="fa-solid fa-user-tie"></i> คณะผู้บริหารเทศบาล</a></li>
+                        <li><a href="council.html#council"><i class="fa-solid fa-users"></i> สมาชิกสภาเทศบาล</a></li>
+                        <li><a href="structure.html"><i class="fa-solid fa-sitemap"></i> โครงสร้าง 7 ส่วนราชการ</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown ">
+                    <a href="eservice.html" class="nav-link">บริการประชาชน (e-Service) <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="eservice.html#overview"><i class="fa-solid fa-desktop"></i> ศูนย์บริการ e-Service Portal</a></li>
+                        <li><a href="eservice.html#water"><i class="fa-solid fa-faucet-drip"></i> คำร้องขอใช้น้ำประปาออนไลน์</a></li>
+                        <li><a href="eservice.html#venue"><i class="fa-solid fa-hotel"></i> คำร้องขอใช้สถานที่ราชการ</a></li>
+                        <li><a href="eservice.html#tax"><i class="fa-solid fa-receipt"></i> ชำระภาษีท้องถิ่นและยื่นแบบ</a></li>
+                        <li><a href="eservice.html#forms"><i class="fa-solid fa-file-pdf"></i> ดาวน์โหลดแบบฟอร์มคำร้อง</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="index.html#news" class="nav-link">ข่าวสาร & ประกาศ <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#news"><i class="fa-regular fa-newspaper"></i> ข่าวประชาสัมพันธ์ทั่วไป</a></li>
+                        <li><a href="index.html#procure"><i class="fa-solid fa-cart-shopping"></i> ประกาศจัดซื้อจัดจ้าง (e-GP)</a></li>
+                        <li><a href="index.html#gallery"><i class="fa-solid fa-images"></i> ภาพกิจกรรมเทศบาล</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown ">
+                    <a href="ita.html" class="nav-link highlight-ita">ความโปร่งใส (ITA / LPA) <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ita.html#oit"><i class="fa-solid fa-shield-halved"></i> การประเมิน ITA (OIT O1-O43)</a></li>
+                        <li><a href="ita.html#no-gift"><i class="fa-solid fa-handshake-slash"></i> นโยบายไม่รับของขวัญ (No Gift Policy)</a></li>
+                        <li><a href="ita.html#finance"><i class="fa-solid fa-chart-pie"></i> แผนการใช้จ่ายงบประมาณ</a></li>
+                        <li><a href="ita.html#ethics"><i class="fa-solid fa-gavel"></i> ประมวลจริยธรรมเจ้าหน้าที่</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item "><a href="contact.html" class="nav-link">ติดต่อเทศบาล</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Subpage Hero Banner with Identity Watermark -->
+    <section class="subpage-hero">
+        <img src="assets/images/identity_ship_waves.svg" alt="อัตลักษณ์เรือสำเภาและคุ้งน้ำเจ้าพระยา" class="identity-watermark">
+        <div class="container">
+            <div class="subpage-breadcrumb">
+                <a href="index.html"><i class="fa-solid fa-house"></i> หน้าหลัก</a>
+                <i class="fa-solid fa-chevron-right text-gold" style="font-size: 0.75rem;"></i>
+                <span>ผู้บริหาร & สภาเทศบาล</span>
+            </div>
+            <h1 class="subpage-title">คณะผู้บริหารและสมาชิกสภาเทศบาลตำบลคุ้งสำเภา</h1>
+            <p class="subpage-subtitle">ทำเนียบคณะผู้บริหาร สมาชิกสภาเทศบาล และผู้นำท้องถิ่นตำบลคุ้งสำเภา อำเภอมโนรมย์ จังหวัดชัยนาท</p>
+        </div>
+    </section>
+
+    <main class="subpage-body">
+        <div class="container">
+            <!-- Executives Section -->
+            <article class="civic-article-card" id="executives">
+                <h2 class="civic-article-title"><i class="fa-solid fa-user-tie text-gold"></i> คณะผู้บริหารเทศบาลตำบลคุ้งสำเภา</h2>
+                <p>ผู้นำฝ่ายบริหารที่มุ่งมั่นขับเคลื่อนนโยบายเพื่อประโยชน์สุขของชาวตำบลคุ้งสำเภา:</p>
+
+                <!-- Mayor Big Spotlight -->
+                <div class="mayor-card" style="margin: 30px 0;">
+                    <div class="mayor-avatar-frame">
+                        <img src="assets/images/mayor.jpg" alt="นายกเทศมนตรีตำบลคุ้งสำเภา" class="mayor-img">
+                        <div class="mayor-badge-gold"><i class="fa-solid fa-ribbon"></i> นายกเทศมนตรี</div>
+                    </div>
+                    <div class="mayor-message">
+                        <span class="sub-lead"><i class="fa-solid fa-landmark"></i> ฝ่ายบริหารเทศบาลตำบลคุ้งสำเภา</span>
+                        <h3 class="mayor-name">นายกเทศมนตรีตำบลคุ้งสำเภา</h3>
+                        <p class="mayor-role">เทศบาลตำบลคุ้งสำเภา อำเภอมโนรมย์ จังหวัดชัยนาท</p>
+                        <div class="mayor-text">
+                            <p>“มุ่งมั่นพัฒนาเทศบาลตำบลคุ้งสำเภา สู่การเป็นเมืองน่าอยู่อย่างยั่งยืน บริการประชาชนด้วยเทคโนโลยีดิจิทัล ยึดหลักธรรมาภิบาล ซื่อสัตย์สุจริต และเปิดโอกาสให้ประชาชนมีส่วนร่วมทุกมิติ”</p>
+                        </div>
+                        <div class="mayor-cta-actions">
+                            <a href="contact.html#mayor-line" class="btn btn-gold btn-sm"><i class="fa-solid fa-phone"></i> สายตรงนายกเทศมนตรี</a>
+                            <a href="ita.html#no-gift" class="btn btn-outline-civic btn-sm"><i class="fa-solid fa-shield-halved"></i> ประกาศ No Gift Policy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Executive Team Members -->
+                <h3 style="font-size: 1.3rem; margin: 30px 0 20px; color: var(--primary-dark);"><i class="fa-solid fa-users-gear text-gold"></i> คณะผู้บริหารและฝ่ายสนับสนุน:</h3>
+                <div class="civic-fact-grid">
+                    <div class="civic-fact-card">
+                        <span class="civic-fact-label">ตำแหน่ง</span>
+                        <span class="civic-fact-value">รองนายกเทศมนตรี (คนที่ 1)</span>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 6px;">ดูแลงานด้านโยธา โครงสร้างพื้นฐาน และกองช่าง</p>
+                    </div>
+                    <div class="civic-fact-card">
+                        <span class="civic-fact-label">ตำแหน่ง</span>
+                        <span class="civic-fact-value">รองนายกเทศมนตรี (คนที่ 2)</span>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 6px;">ดูแลงานด้านการศึกษา สาธารณสุข และพัฒนาชุมชน</p>
+                    </div>
+                    <div class="civic-fact-card">
+                        <span class="civic-fact-label">ตำแหน่ง</span>
+                        <span class="civic-fact-value">ที่ปรึกษานายกเทศมนตรี</span>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 6px;">ให้คำปรึกษาด้านนโยบาย ยุทธศาสตร์ และการมีส่วนร่วม</p>
+                    </div>
+                    <div class="civic-fact-card">
+                        <span class="civic-fact-label">ตำแหน่ง</span>
+                        <span class="civic-fact-value">เลขานุการนายกเทศมนตรี</span>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 6px;">ประสานงานราชการและข้อร้องเรียนของประชาชน</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Council Section -->
+            <article class="civic-article-card" id="council">
+                <h2 class="civic-article-title"><i class="fa-solid fa-users text-gold"></i> สภาเทศบาลตำบลคุ้งสำเภา</h2>
+                <p>ฝ่ายนิติบัญญัติ ทำหน้าที่ตรวจสอบการทำงานของฝ่ายบริหาร และพิจารณาให้ความเห็นชอบเทศบัญญัติงบประมาณรายจ่ายประจำปี เพื่อประโยชน์สูงสุดของประชาชนในตำบลคุ้งสำเภา:</p>
+
+                <div class="civic-fact-grid" style="margin-top: 25px;">
+                    <div class="civic-fact-card" style="border-left-color: var(--blue);">
+                        <span class="civic-fact-label">ประธานฝ่ายนิติบัญญัติ</span>
+                        <span class="civic-fact-value">ประธานสภาเทศบาลตำบลคุ้งสำเภา</span>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px;">ควบคุมการประชุมสภาและรักษาความสงบเรียบร้อย</p>
+                    </div>
+                    <div class="civic-fact-card" style="border-left-color: var(--blue);">
+                        <span class="civic-fact-label">รองประธาน</span>
+                        <span class="civic-fact-value">รองประธานสภาเทศบาลตำบลคุ้งสำเภา</span>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px;">ปฏิบัติหน้าที่แทนเมื่อประธานสภาไม่อยู่</p>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 1.15rem; margin-top: 30px; margin-bottom: 14px; color: var(--primary-dark);"><i class="fa-solid fa-map-marked-alt text-gold"></i> สมาชิกสภาเทศบาลตำบลคุ้งสำเภา (เขต 1 และ เขต 2):</h3>
+                <table class="civic-table">
+                    <thead>
+                        <tr>
+                            <th>เขตเลือกตั้ง</th>
+                            <th>จำนวนสมาชิก</th>
+                            <th>บทบาทหน้าที่หลัก</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>สมาชิกสภาเทศบาล เขต 1</strong></td>
+                            <td>6 ท่าน</td>
+                            <td>รับฟังปัญหาและประสานงานข้อร้องทุกข์ของประชาชนในเขตที่ 1 ชุมชนริมแม่น้ำเจ้าพระยาและตลาดมโนรมย์</td>
+                        </tr>
+                        <tr>
+                            <td><strong>สมาชิกสภาเทศบาล เขต 2</strong></td>
+                            <td>6 ท่าน</td>
+                            <td>ดูแลความเป็นอยู่ ประสานงานโครงการพัฒนา และสาธารณูปโภคในเขตที่ 2 พื้นที่เกษตรกรรมและชุมชนขยาย</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </div>
+    </main>
+
+    <!-- Official Civic Footer -->
+    <footer class="footer-civic" id="contactFooter">
+        <div class="container footer-grid">
+            <div class="footer-col footer-about">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.png" alt="โลโก้เทศบาลตำบลคุ้งสำเภา" class="footer-logo-img">
+                    <div>
+                        <h4 class="footer-title">เทศบาลตำบลคุ้งสำเภา</h4>
+                        <span class="footer-sub">อำเภอมโนรมย์ จังหวัดชัยนาท</span>
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    องค์กรปกครองส่วนท้องถิ่นที่มุ่งมั่นให้บริการประชาชนด้วยความโปร่งใส รวดเร็ว และเป็นธรรม ยกระดับคุณภาพชีวิตตามหลักธรรมาภิบาลและการพัฒนาอย่างยั่งยืน
+                </p>
+                <div class="footer-ita-status">
+                    <span class="ita-tag"><i class="fa-solid fa-shield-check"></i> ITA ประเมินคุณธรรมและความโปร่งใส</span>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">เมนูลัดบริการประชาชน</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> ประวัติและข้อมูลเทศบาล</a></li>
+                    <li><a href="council.html"><i class="fa-solid fa-angle-right"></i> คณะผู้บริหารและสมาชิกสภา</a></li>
+                    <li><a href="structure.html"><i class="fa-solid fa-angle-right"></i> โครงสร้าง 7 ส่วนราชการ</a></li>
+                    <li><a href="eservice.html"><i class="fa-solid fa-angle-right"></i> ระบบ e-Service ยื่นคำร้องออนไลน์</a></li>
+                    <li><a href="ita.html"><i class="fa-solid fa-angle-right"></i> ข้อมูลความโปร่งใส (ITA O1-O43)</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> สายตรงนายกและช่องทางติดต่อ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">ระบบงานราชการภายใน</h4>
+                <ul class="footer-links">
+                    <li><a href="https://khungsumpao.c.eoffice.go.th/portal/" target="_blank" class="eoffice-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> ระบบสารบรรณอิเล็กทรอนิกส์ (e-Office)</a></li>
+                    <li><a href="https://www.gprocurement.go.th" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> ระบบจัดซื้อจัดจ้างภาครัฐ (e-GP)</a></li>
+                    <li><a href="https://dla.go.th" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> กรมส่งเสริมการปกครองท้องถิ่น</a></li>
+                    <li><a href="ita.html#no-gift"><i class="fa-solid fa-handshake-slash"></i> นโยบาย No Gift Policy</a></li>
+                    <li><a href="about.html#duties"><i class="fa-solid fa-book"></i> พ.ร.บ. ข้อมูลข่าวสารของราชการ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-contact-box">
+                <h4 class="footer-heading">ที่ทำการเทศบาลตำบลคุ้งสำเภา</h4>
+                <address class="footer-address">
+                    <p><i class="fa-solid fa-location-dot"></i> หมู่ที่ 4 ถนนชัยนาท-มโนรมย์ ตำบลคุ้งสำเภา อำเภอมโนรมย์ จังหวัดชัยนาท 17110</p>
+                    <p><i class="fa-solid fa-phone"></i> โทรศัพท์: <a href="tel:056491325">056-491-325</a></p>
+                    <p><i class="fa-solid fa-envelope"></i> อีเมล: <a href="mailto:saraban-khungsumpao@lgo.mail.go.th">saraban-khungsumpao@lgo.mail.go.th</a></p>
+                    <p><i class="fa-solid fa-clock"></i> จันทร์ - ศุกร์: 08:30 - 16:30 น. (เว้นวันหยุดราชการ)</p>
+                </address>
+                <div class="qrcode-wrapper">
+                    <img src="assets/images/qrcode_contact.jpg" alt="QR Code ติดต่อเทศบาลตำบลคุ้งสำเภา" class="qrcode-img">
+                    <span class="qrcode-hint"><i class="fa-solid fa-camera"></i> สแกนเพื่อติดต่อราชการ</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p class="copyright">สงวนลิขสิทธิ์ &copy; 2026 เทศบาลตำบลคุ้งสำเภา อำเภอมโนรมย์ จังหวัดชัยนาท | พัฒนาตามเกณฑ์ LPA ITA & PDPA</p>
+                <div class="footer-extra-links">
+                    <a href="about.html">เกี่ยวกับเรา</a> | 
+                    <a href="eservice.html">e-Service</a> | 
+                    <a href="ita.html">ITA Transparency</a> | 
+                    <a href="contact.html">ติดต่อเรา</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Citizen Assistant Floating Button & Widget -->
+    <div class="ai-assistant-widget" id="aiAssistantWidget">
+        <button class="ai-fab-btn" id="aiFabBtn" aria-label="ผู้ช่วยราชการ AI น้องสำเภา">
+            <div class="ai-fab-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="ai-fab-label">น้องสำเภา AI</div>
+        </button>
+        <div class="ai-chat-window" id="aiChatWindow" aria-hidden="true">
+            <div class="ai-chat-header">
+                <div class="ai-bot-profile">
+                    <div class="ai-avatar-circle"><i class="fa-solid fa-robot"></i></div>
+                    <div>
+                        <h4 class="ai-bot-name">น้องสำเภา AI</h4>
+                        <span class="ai-bot-status"><i class="fa-solid fa-circle"></i> พร้อมให้บริการข้อมูลราชการ</span>
+                    </div>
+                </div>
+                <button class="ai-close-btn" id="aiCloseBtn" aria-label="ปิดหน้าต่าง">&times;</button>
+            </div>
+            <div class="ai-chat-body" id="aiChatBody">
+                <div class="ai-message bot">
+                    <p>สวัสดีครับพ่อแม่พี่น้องชาวตำบลคุ้งสำเภา! ผมคือ <strong>"น้องสำเภา AI"</strong> ผู้ช่วยอัจฉริยะประจำเทศบาลตำบลคุ้งสำเภา มีอะไรให้ผมช่วยเหลือเรื่องงานบริการ ข้อมูลจัดซื้อจัดจ้าง หรือเอกสารราชการ สอบถามได้เลยครับ!</p>
+                </div>
+            </div>
+            <div class="ai-chat-quick-tags">
+                <button class="quick-tag" data-query="ขอน้ำประปาออนไลน์">🚰 ขอน้ำประปา</button>
+                <button class="quick-tag" data-query="ติดต่อเทศบาล">📞 เบอร์ติดต่อ</button>
+                <button class="quick-tag" data-query="ชำระภาษีท้องถิ่น">💰 ภาษีที่ดิน</button>
+                <button class="quick-tag" data-query="นโยบาย No Gift">🛡️ No Gift</button>
+            </div>
+            <div class="ai-chat-footer">
+                <input type="text" id="aiUserInput" placeholder="พิมพ์คำถามของคุณที่นี่..." aria-label="พิมพ์ข้อความ">
+                <button type="button" id="aiSendBtn" aria-label="ส่งข้อความ"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDPA Compliance & Cookie Consent System -->
+    <div id="pdpa-banner" class="pdpa-banner" role="dialog" aria-modal="true" aria-labelledby="pdpa-title">
+        <div class="container pdpa-container">
+            <div class="pdpa-content">
+                <div class="pdpa-icon-box"><i class="fa-solid fa-cookie-bite"></i></div>
+                <div class="pdpa-text">
+                    <h4 id="pdpa-title" class="pdpa-title">การใช้งานคุกกี้ (Cookies) และนโยบายคุ้มครองข้อมูลส่วนบุคคล (PDPA)</h4>
+                    <p class="pdpa-desc">เทศบาลตำบลคุ้งสำเภา มีการใช้งานคุกกี้เพื่อเพิ่มประสิทธิภาพในการให้บริการออนไลน์ มอบประสบการณ์การใช้งานที่ดีที่สุด และสอดคล้องตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA)</p>
+                </div>
+            </div>
+            <div class="pdpa-actions">
+                <button type="button" class="btn btn-pdpa-accept" id="btn-pdpa-accept-all"><i class="fa-solid fa-check"></i> ยอมรับทั้งหมด</button>
+                <button type="button" class="btn btn-pdpa-reject" id="btn-pdpa-reject">ปฏิเสธที่ไม่จำเป็น</button>
+                <button type="button" class="btn btn-pdpa-settings" id="btn-pdpa-open-settings"><i class="fa-solid fa-sliders"></i> ตั้งค่าคุกกี้</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="pdpa-modal" class="pdpa-modal-overlay" aria-hidden="true">
+        <div class="pdpa-modal-box">
+            <div class="pdpa-modal-header">
+                <div class="pdpa-modal-title-group">
+                    <i class="fa-solid fa-shield-halved pdpa-modal-icon"></i>
+                    <div>
+                        <h3 class="pdpa-modal-title">ศูนย์จัดการความเป็นส่วนตัวและคุกกี้ (Privacy & Cookies Settings)</h3>
+                        <p class="pdpa-modal-subtitle">เทศบาลตำบลคุ้งสำเภา อำเภอมโนรมย์ จังหวัดชัยนาท</p>
+                    </div>
+                </div>
+                <button type="button" class="pdpa-modal-close" id="btn-pdpa-close-modal" aria-label="ปิดหน้าต่าง">&times;</button>
+            </div>
+            <div class="pdpa-modal-body">
+                <div class="pdpa-category-card">
+                    <div class="pdpa-cat-header">
+                        <div class="pdpa-cat-info">
+                            <h4 class="pdpa-cat-title"><i class="fa-solid fa-lock text-gold"></i> คุกกี้ที่จำเป็นอย่างยิ่ง (Strictly Necessary Cookies)</h4>
+                            <span class="pdpa-cat-badge always-active">เปิดใช้งานตลอดเวลา (จำเป็น)</span>
+                        </div>
+                        <div class="pdpa-switch disabled">
+                            <input type="checkbox" id="cookie-necessary" checked disabled>
+                            <label for="cookie-necessary" class="pdpa-slider"></label>
+                        </div>
+                    </div>
+                    <p class="pdpa-cat-desc">จำเป็นสำหรับการทำงานพื้นฐานของเว็บไซต์ เช่น การเข้าสู่ระบบ e-Service และการนำทาง</p>
+                </div>
+                <div class="pdpa-category-card">
+                    <div class="pdpa-cat-header">
+                        <div class="pdpa-cat-info"><h4 class="pdpa-cat-title"><i class="fa-solid fa-chart-line text-blue"></i> คุกกี้เพื่อการวิเคราะห์และประเมินผล (Analytics Cookies)</h4></div>
+                        <div class="pdpa-switch">
+                            <input type="checkbox" id="cookie-analytics" checked>
+                            <label for="cookie-analytics" class="pdpa-slider"></label>
+                        </div>
+                    </div>
+                    <p class="pdpa-cat-desc">ช่วยให้เทศบาลเข้าใจพฤติกรรมการใช้งานเพื่อนำสถิติไปปรับปรุงการให้บริการประชาชน</p>
+                </div>
+            </div>
+            <div class="pdpa-modal-footer">
+                <button type="button" class="btn btn-pdpa-save" id="btn-pdpa-save-preferences"><i class="fa-solid fa-floppy-disk"></i> บันทึกการตั้งค่า</button>
+                <button type="button" class="btn btn-pdpa-accept-modal" id="btn-pdpa-accept-all-modal">ยอมรับทั้งหมด</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="pdpa-floating-trigger" class="pdpa-floating-badge" title="คลิกเพื่อจัดการความยินยอมคุกกี้และสิทธิ PDPA">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span class="pdpa-badge-text">นโยบายคุกกี้ & PDPA</span>
+    </button>
+
+    <!-- Core Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

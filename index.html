@@ -9,7 +9,9 @@
     <!-- Google Fonts: Sarabun & Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -88,63 +90,52 @@
                 <i class="fa-solid fa-bars"></i> เมนูหลัก
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li class="nav-item active"><a href="#" class="nav-link"><i class="fa-solid fa-house"></i> หน้าหลัก</a></li>
+                                <li class="nav-item active"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> หน้าหลัก</a></li>
                 <li class="nav-item has-dropdown">
-                    <a href="#about" class="nav-link">เกี่ยวกับเทศบาล <i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="about.html" class="nav-link">เกี่ยวกับเทศบาล <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#about"><i class="fa-solid fa-landmark"></i> ประวัติเทศบาลตำบลคุ้งสำเภา</a></li>
-                        <li><a href="#info"><i class="fa-solid fa-circle-info"></i> ข้อมูลทั่วไปของเทศบาล</a></li>
-                        <li><a href="#vision"><i class="fa-solid fa-compass"></i> วิสัยทัศน์และนโยบายการพัฒนา</a></li>
-                        <li><a href="#structure"><i class="fa-solid fa-sitemap"></i> โครงสร้างเทศบาล</a></li>
-                        <li><a href="#duties"><i class="fa-solid fa-scale-balanced"></i> อำนาจหน้าที่และกฎหมายที่เกี่ยวข้อง</a></li>
-                        <li><a href="#ethics"><i class="fa-solid fa-award"></i> ประมวลจริยธรรมสำหรับเจ้าหน้าที่</a></li>
+                        <li><a href="about.html#history"><i class="fa-solid fa-landmark"></i> ประวัติเทศบาลตำบลคุ้งสำเภา</a></li>
+                        <li><a href="about.html#info"><i class="fa-solid fa-circle-info"></i> ข้อมูลทั่วไปและสภาพพื้นที่</a></li>
+                        <li><a href="about.html#vision"><i class="fa-solid fa-bullseye"></i> วิสัยทัศน์และพันธกิจ</a></li>
+                        <li><a href="about.html#duties"><i class="fa-solid fa-scale-balanced"></i> อำนาจหน้าที่ตามกฎหมาย</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <a href="#executives" class="nav-link">ผู้บริหาร & สภา <i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="council.html" class="nav-link">ผู้บริหาร & สภา <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#mayor"><i class="fa-solid fa-user-tie"></i> คณะผู้บริหารเทศบาล</a></li>
-                        <li><a href="#council"><i class="fa-solid fa-users"></i> สมาชิกสภาเทศบาล</a></li>
-                        <li><a href="#leaders"><i class="fa-solid fa-user-gear"></i> หัวหน้าส่วนราชการ</a></li>
-                        <li><a href="#departments"><i class="fa-solid fa-building-user"></i> 7 ส่วนราชการในสังกัด</a></li>
+                        <li><a href="council.html#executives"><i class="fa-solid fa-user-tie"></i> คณะผู้บริหารเทศบาล</a></li>
+                        <li><a href="council.html#council"><i class="fa-solid fa-users"></i> สมาชิกสภาเทศบาล</a></li>
+                        <li><a href="structure.html"><i class="fa-solid fa-sitemap"></i> โครงสร้าง 7 ส่วนราชการ</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <a href="#eservice" class="nav-link">บริการประชาชน (e-Service) <i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="eservice.html" class="nav-link">บริการประชาชน (e-Service) <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#eservice-water"><i class="fa-solid fa-faucet-drip"></i> คำร้องขอใช้น้ำประปาออนไลน์</a></li>
-                        <li><a href="#eservice-venue"><i class="fa-solid fa-hotel"></i> คำร้องขอใช้สถานที่ราชการ</a></li>
-                        <li><a href="#eservice-disaster"><i class="fa-solid fa-shield-heart"></i> ขอรับการช่วยเหลือผู้ประสบสาธารณภัย</a></li>
-                        <li><a href="#complain"><i class="fa-solid fa-envelope-open-text"></i> ยื่นคำร้องเรียน-ร้องทุกข์ออนไลน์</a></li>
-                        <li><a href="#tax"><i class="fa-solid fa-receipt"></i> ชำระภาษีที่ดินและป้ายออนไลน์</a></li>
-                        <li><a href="#building"><i class="fa-solid fa-file-signature"></i> ขออนุญาตก่อสร้าง/ขุดดินถมดิน</a></li>
-                        <li><a href="#billboard"><i class="fa-solid fa-signs-post"></i> แจ้งเบาะแสป้ายโฆษณาผิดระเบียบ</a></li>
-                        <li><a href="#queue"><i class="fa-solid fa-calendar-check"></i> นัดหมายติดต่อราชการล่วงหน้า</a></li>
+                        <li><a href="eservice.html#overview"><i class="fa-solid fa-desktop"></i> ศูนย์บริการ e-Service Portal</a></li>
+                        <li><a href="eservice.html#water"><i class="fa-solid fa-faucet-drip"></i> คำร้องขอใช้น้ำประปาออนไลน์</a></li>
+                        <li><a href="eservice.html#venue"><i class="fa-solid fa-hotel"></i> คำร้องขอใช้สถานที่ราชการ</a></li>
+                        <li><a href="eservice.html#tax"><i class="fa-solid fa-receipt"></i> ชำระภาษีท้องถิ่นและยื่นแบบ</a></li>
+                        <li><a href="eservice.html#forms"><i class="fa-solid fa-file-pdf"></i> ดาวน์โหลดแบบฟอร์มคำร้อง</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
                     <a href="#news" class="nav-link">ข่าวสาร & ประกาศ <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#news-pr"><i class="fa-regular fa-newspaper"></i> ข่าวประชาสัมพันธ์ทั่วไป</a></li>
+                        <li><a href="#news"><i class="fa-regular fa-newspaper"></i> ข่าวประชาสัมพันธ์ทั่วไป</a></li>
                         <li><a href="#procure"><i class="fa-solid fa-cart-shopping"></i> ประกาศจัดซื้อจัดจ้าง (e-GP)</a></li>
-                        <li><a href="#council-pr"><i class="fa-solid fa-landmark-dome"></i> ประกาศงานกิจการสภาเทศบาล</a></li>
-                        <li><a href="#water-pr"><i class="fa-solid fa-droplet"></i> ข่าวประชาสัมพันธ์ระบบประปา</a></li>
-                        <li><a href="#hr-pr"><i class="fa-solid fa-id-card"></i> ข่าวการบริหารงานบุคคล / รับสมัครงาน</a></li>
-                        <li><a href="#annual-report"><i class="fa-solid fa-book-open"></i> วารสารและรายงานประจำปี</a></li>
+                        <li><a href="#gallery"><i class="fa-solid fa-images"></i> ภาพกิจกรรมเทศบาล</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <a href="#ita" class="nav-link highlight-ita">ความโปร่งใส (ITA / LPA) <i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="ita.html" class="nav-link highlight-ita">ความโปร่งใส (ITA / LPA) <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#ita-oit"><i class="fa-solid fa-shield-halved"></i> การประเมินคุณธรรมและความโปร่งใส (ITA)</a></li>
-                        <li><a href="#no-gift"><i class="fa-solid fa-handshake-slash"></i> นโยบายไม่รับของขวัญ (No Gift Policy)</a></li>
-                        <li><a href="#plans"><i class="fa-solid fa-chart-line"></i> ข้อมูลแผนพัฒนาเทศบาล</a></li>
-                        <li><a href="#budget"><i class="fa-solid fa-coins"></i> เทศบัญญัติงบประมาณรายจ่าย</a></li>
-                        <li><a href="#skr1"><i class="fa-solid fa-file-invoice-dollar"></i> สรุปผลการจัดซื้อจัดจ้าง (สขร.1)</a></li>
-                        <li><a href="#whistleblower"><i class="fa-solid fa-user-secret"></i> ศูนย์รับเรื่องทุจริตและประพฤติมิชอบ</a></li>
+                        <li><a href="ita.html#oit"><i class="fa-solid fa-shield-halved"></i> การประเมิน ITA (OIT O1-O43)</a></li>
+                        <li><a href="ita.html#no-gift"><i class="fa-solid fa-handshake-slash"></i> นโยบายไม่รับของขวัญ (No Gift Policy)</a></li>
+                        <li><a href="ita.html#finance"><i class="fa-solid fa-chart-pie"></i> แผนการใช้จ่ายงบประมาณ</a></li>
+                        <li><a href="ita.html#ethics"><i class="fa-solid fa-gavel"></i> ประมวลจริยธรรมเจ้าหน้าที่</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a href="#contact" class="nav-link">ติดต่อเทศบาล</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">ติดต่อเทศบาล</a></li>
             </ul>
             <div class="nav-search">
                 <input type="text" placeholder="ค้นหาข้อมูล / บริการ..." id="navSearchInput">
@@ -156,6 +147,8 @@
     <!-- 4. Hero Section: Modern Civic Showcase with Official Slides -->
     <section class="hero-section">
         <div class="hero-backdrop"></div>
+        <!-- อัตลักษณ์เทศบาลตำบลคุ้งสำเภา: ลายเส้นคลื่นน้ำคุ้งเจ้าพระยาและเรือสำเภาพาณิชย์ 3 เสา -->
+        <img src="assets/images/identity_ship_waves.svg" alt="อัตลักษณ์เรือสำเภาและคุ้งน้ำเจ้าพระยา" class="identity-watermark">
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-badge">

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%" fill="none">
+    <defs>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.9"/>
+            <stop offset="50%" stop-color="#fbbf24" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#d97706" stop-opacity="0.8"/>
+        </linearGradient>
+        <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1"/>
+            <stop offset="30%" stop-color="#f59e0b" stop-opacity="0.35"/>
+            <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.15"/>
+        </linearGradient>
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+    </defs>
+
+    <!-- Khung Sumpao River Meander Waves (คุ้งน้ำเจ้าพระยา) -->
+    <g class="river-waves" stroke="url(#waveGrad)" stroke-width="1.8" stroke-linecap="round">
+        <path d="M -50,320 C 150,280 250,370 450,330 C 650,290 750,350 900,310" opacity="0.6"/>
+        <path d="M -80,345 C 120,310 280,390 480,345 C 680,305 780,375 920,335" opacity="0.8"/>
+        <path d="M -30,370 C 180,340 320,410 520,365 C 720,325 820,390 950,355" opacity="0.5"/>
+        <path d="M 0,390 C 220,360 360,420 560,380 C 760,340 850,400 980,375" opacity="0.3"/>
+    </g>
+
+    <!-- Historic Junk Ship Line Art (เรือสำเภาพาณิชย์โบราณ 3 เสา) -->
+    <g class="junk-ship" transform="translate(340, 90)" filter="url(#glow)">
+        <!-- Water reflection ripples beneath hull -->
+        <path d="M -90,195 Q 60,225 210,195" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="4 6" opacity="0.7"/>
+        <path d="M -60,205 Q 60,230 180,205" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="3 5" opacity="0.5"/>
+
+        <!-- Ship Hull (ตัวเรือสำเภา) -->
+        <path d="M -110,150 
+                 C -90,190 -40,205 60,205 
+                 C 160,205 210,185 230,140 
+                 L 220,135 
+                 C 180,165 140,175 60,175 
+                 C -20,175 -70,165 -100,145 
+                 Z" 
+              fill="rgba(245, 158, 11, 0.08)" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linejoin="round"/>
+
+        <!-- Hull horizontal timber accents -->
+        <path d="M -85,165 C -20,185 50,185 195,158" stroke="url(#goldGrad)" stroke-width="1.2" opacity="0.8"/>
+        <path d="M -70,180 C -10,195 60,195 165,175" stroke="url(#goldGrad)" stroke-width="1" opacity="0.6"/>
+
+        <!-- Stern & Bow decorative lines -->
+        <path d="M 220,135 L 235,115 L 210,118" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M -100,145 L -115,120 L -95,125" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round"/>
+
+        <!-- Mast 1 (Fore-mast เสาหน้า) -->
+        <line x1="-30" y1="175" x2="-30" y2="45" stroke="url(#goldGrad)" stroke-width="2.2" stroke-linecap="round"/>
+        <!-- Fore Sail & Battens (ใบเรือหน้า) -->
+        <path d="M -30,55 C -65,70 -75,120 -30,145 Z" fill="rgba(251, 191, 36, 0.12)" stroke="url(#goldGrad)" stroke-width="1.6"/>
+        <line x1="-30" y1="78" x2="-63" y2="85" stroke="url(#goldGrad)" stroke-width="1" opacity="0.8"/>
+        <line x1="-30" y1="102" x2="-68" y2="108" stroke="url(#goldGrad)" stroke-width="1" opacity="0.8"/>
+        <line x1="-30" y1="125" x2="-58" y2="128" stroke="url(#goldGrad)" stroke-width="1" opacity="0.8"/>
+
+        <!-- Mast 2 (Main-mast เสากลาง - สูงสง่า) -->
+        <line x1="50" y1="175" x2="50" y2="10" stroke="url(#goldGrad)" stroke-width="2.8" stroke-linecap="round"/>
+        <!-- Main Sail & Battens (ใบเรือประธาน) -->
+        <path d="M 50,22 C -5,40 -15,120 50,155 Z" fill="rgba(251, 191, 36, 0.15)" stroke="url(#goldGrad)" stroke-width="2"/>
+        <line x1="50" y1="52" x2="2" y2="60" stroke="url(#goldGrad)" stroke-width="1.2" opacity="0.9"/>
+        <line x1="50" y1="82" x2="-8" y2="90" stroke="url(#goldGrad)" stroke-width="1.2" opacity="0.9"/>
+        <line x1="50" y1="112" x2="-3" y2="118" stroke="url(#goldGrad)" stroke-width="1.2" opacity="0.9"/>
+        <line x1="50" y1="138" x2="15" y2="142" stroke="url(#goldGrad)" stroke-width="1.2" opacity="0.9"/>
+        <!-- Pennant / Streamer (ธงชัยยอดเสา) -->
+        <path d="M 50,10 L 80,16 L 50,22 Z" fill="url(#goldGrad)"/>
+
+        <!-- Mast 3 (Mizzen-mast เสาท้าย) -->
+        <line x1="130" y1="175" x2="130" y2="60" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round"/>
+        <!-- Mizzen Sail & Battens (ใบเรือท้าย) -->
+        <path d="M 130,70 C 95,85 85,130 130,150 Z" fill="rgba(251, 191, 36, 0.1)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+        <line x1="130" y1="92" x2="98" y2="98" stroke="url(#goldGrad)" stroke-width="1" opacity="0.8"/>
+        <line x1="130" y1="115" x2="93" y2="120" stroke="url(#goldGrad)" stroke-width="1" opacity="0.8"/>
+        <line x1="130" y1="135" x2="105" y2="138" stroke="url(#goldGrad)" stroke-width="1" opacity="0.8"/>
+
+        <!-- Rigging ropes (สายระโยงระยาง) -->
+        <line x1="-30" y1="45" x2="-90" y2="155" stroke="url(#goldGrad)" stroke-width="0.9" stroke-dasharray="2 3" opacity="0.5"/>
+        <line x1="50" y1="10" x2="-30" y2="45" stroke="url(#goldGrad)" stroke-width="1" opacity="0.6"/>
+        <line x1="50" y1="10" x2="130" y2="60" stroke="url(#goldGrad)" stroke-width="1" opacity="0.6"/>
+        <line x1="130" y1="60" x2="200" y2="150" stroke="url(#goldGrad)" stroke-width="0.9" stroke-dasharray="2 3" opacity="0.5"/>
+    </g>
+
+    <!-- Star & Constellation Navigation points (สัญลักษณ์ดวงดาวนำร่องพาณิชย์) -->
+    <g class="celestial-stars" fill="#fbbf24" opacity="0.6">
+        <circle cx="280" cy="50" r="2"/>
+        <circle cx="310" cy="30" r="1.5"/>
+        <circle cx="580" cy="40" r="2.5"/>
+        <circle cx="620" cy="65" r="1.5"/>
+        <circle cx="210" cy="90" r="1.5"/>
+    </g>
+</svg>

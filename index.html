@@ -121,9 +121,9 @@
                 <li class="nav-item has-dropdown">
                     <a href="#news" class="nav-link">ข่าวสาร & ประกาศ <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#news"><i class="fa-regular fa-newspaper"></i> ข่าวประชาสัมพันธ์ทั่วไป</a></li>
-                        <li><a href="#procure"><i class="fa-solid fa-cart-shopping"></i> ประกาศจัดซื้อจัดจ้าง (e-GP)</a></li>
-                        <li><a href="#gallery"><i class="fa-solid fa-images"></i> ภาพกิจกรรมเทศบาล</a></li>
+                        <li><a href="news.html"><i class="fa-regular fa-newspaper"></i> ข่าวประชาสัมพันธ์ทั่วไป</a></li>
+                        <li><a href="procurement.html"><i class="fa-solid fa-cart-shopping"></i> ประกาศจัดซื้อจัดจ้าง (e-GP)</a></li>
+                        <li><a href="news.html#gallery"><i class="fa-solid fa-images"></i> ภาพกิจกรรมเทศบาล</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
@@ -256,10 +256,11 @@
                     <div class="mayor-header-badge">
                         <span class="sub-lead"><i class="fa-solid fa-landmark"></i> สารจากฝ่ายบริหารเทศบาลตำบลคุ้งสำเภา</span>
                     </div>
-                    <h3 class="mayor-name">นายกเทศมนตรีตำบลคุ้งสำเภา</h3>
-                    <p class="mayor-role"><i class="fa-solid fa-location-dot"></i> คณะผู้บริหารเทศบาลตำบลคุ้งสำเภา อำเภอมโนรมย์ จังหวัดชัยนาท</p>
+                    <h3 class="mayor-name">นายชาตรีคาล สกุลสุริยะ</h3>
+                    <p class="mayor-role"><i class="fa-solid fa-ribbon text-gold"></i> นายกเทศมนตรีตำบลคุ้งสำเภา อำเภอมโนรมย์ จังหวัดชัยนาท</p>
                     <div class="mayor-text">
                         <p>“เทศบาลตำบลคุ้งสำเภา มุ่งมั่นขับเคลื่อนการพัฒนาท้องถิ่นสู่การเป็นองค์กรดิจิทัลอัจฉริยะ ยึดหลักธรรมาภิบาล ความโปร่งใส ตรวจสอบได้ พร้อมเปิดรับการมีส่วนร่วมของพี่น้องประชาชน เพื่อยกระดับคุณภาพชีวิต สร้างสุขอย่างยั่งยืนบนวิถีแห่งความพอเพียง”</p>
+                        <div class="mayor-signature-author"><i class="fa-solid fa-pen-nib text-gold"></i> นายชาตรีคาล สกุลสุริยะ (นายกเทศมนตรีตำบลคุ้งสำเภา)</div>
                     </div>
                     <div class="mayor-signature-line">
                         <div class="policy-pill"><i class="fa-solid fa-check-circle"></i> มุ่งมั่นปฏิบัติงานด้วยความซื่อสัตย์สุจริต</div>
@@ -455,7 +456,7 @@
         </div>
     </section>
 
-    <!-- 9. Public News & Activities with Real Images -->
+    <!-- 9. Public News & Activities with Real Images (Smart Containment & Zero-Crop) -->
     <section class="section-news" id="news">
         <div class="container">
             <div class="section-header news-header-flex">
@@ -472,124 +473,118 @@
                 </div>
             </div>
 
-            <!-- Tab 1: ข่าวประชาสัมพันธ์ -->
+            <!-- Tab 1: ข่าวประชาสัมพันธ์ (Smart Containment: ตัวหนังสือไม่ถูกตัดขอบ 100%) -->
             <div class="tab-content active" id="tab-pr">
                 <div class="news-cards-grid">
-                    <article class="news-card">
+                    <article class="news-card card-hover-lift">
                         <div class="news-thumb">
-                            <span class="thumb-badge">กิจกรรมเด่น</span>
-                            <img src="assets/images/banner_activity_1.jpg" alt="กิจกรรมเทศบาลตำบลคุ้งสำเภา" class="card-real-img">
+                            <div class="thumb-ambient-bg" style="background-image: url('assets/images/banner_activity_1.jpg');"></div>
+                            <span class="thumb-badge"><i class="fa-solid fa-receipt"></i> ภาษีท้องถิ่น</span>
+                            <img src="assets/images/banner_activity_1.jpg" alt="กำหนดการยื่นแบบและชำระภาษีท้องถิ่น เทศบาลตำบลคุ้งสำเภา" class="card-real-img" onclick="openLightbox(this.src, this.alt)" title="คลิกเพื่อขยายดูภาพเต็ม">
+                        </div>
+                        <div class="news-body">
+                            <div class="news-meta"><i class="fa-regular fa-calendar"></i> กันยายน 2569 | โดย กองคลัง</div>
+                            <h3 class="news-title">ประชาสัมพันธ์กำหนดการยื่นแบบและชำระภาษีท้องถิ่น ประจำปี 2569</h3>
+                            <p class="news-excerpt">กองคลัง เทศบาลตำบลคุ้งสำเภา ขอเชิญชวนผู้มีหน้าที่เสียภาษีที่ดินและสิ่งปลูกสร้าง และภาษีป้าย ดำเนินการยื่นแบบและชำระภาษีตามกำหนดเวลา เพื่อนำรายได้มาพัฒนาท้องถิ่น...</p>
+                            <a href="news-detail.html?id=tax-2569" class="news-readmore">อ่านรายละเอียด <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card card-hover-lift">
+                        <div class="news-thumb">
+                            <div class="thumb-ambient-bg" style="background-image: url('assets/images/banner_slide_1.jpg');"></div>
+                            <span class="thumb-badge badge-blue"><i class="fa-solid fa-wheelchair"></i> บริการสังคม</span>
+                            <img src="assets/images/banner_slide_1.jpg" alt="สิ่งอำนวยความสะดวกสำหรับคนพิการและผู้สูงอายุ" class="card-real-img" onclick="openLightbox(this.src, this.alt)" title="คลิกเพื่อขยายดูภาพเต็ม">
                         </div>
                         <div class="news-body">
                             <div class="news-meta"><i class="fa-regular fa-calendar"></i> กันยายน 2569 | โดย สำนักปลัดเทศบาล</div>
-                            <h3 class="news-title">เทศบาลตำบลคุ้งสำเภา จัดกิจกรรมและโครงการส่งเสริมคุณภาพชีวิตประชาชนในชุมชน</h3>
-                            <p class="news-excerpt">คณะผู้บริหารและเจ้าหน้าที่ลงพื้นที่ตรวจเยี่ยมและดำเนินกิจกรรมเพื่อประโยชน์สุขของพี่น้องประชาชนในเขตเทศบาลตำบลคุ้งสำเภา...</p>
-                            <a href="https://www.khungsumpao.go.th/pr%20normal.html" target="_blank" class="news-readmore">อ่านรายละเอียด <i class="fa-solid fa-arrow-right"></i></a>
+                            <h3 class="news-title">ประชาสัมพันธ์สิ่งอำนวยความสะดวกขั้นพื้นฐานสำหรับคนพิการและผู้สูงอายุ</h3>
+                            <p class="news-excerpt">เทศบาลตำบลคุ้งสำเภา จัดทำทางลาดพร้อมราวจับ ที่จอดรถเฉพาะ ป้ายสัญลักษณ์ที่ชัดเจน และห้องน้ำสำหรับคนพิการ เพื่อความสะดวกและเสมอภาคในการรับบริการ...</p>
+                            <a href="news-detail.html?id=accessibility" class="news-readmore">อ่านรายละเอียด <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
 
-                    <article class="news-card">
+                    <article class="news-card card-hover-lift">
                         <div class="news-thumb">
-                            <span class="thumb-badge badge-blue">งานประปา</span>
-                            <img src="assets/images/banner_slide_1.jpg" alt="งานบริการน้ำประปา" class="card-real-img">
+                            <div class="thumb-ambient-bg" style="background-image: url('assets/images/no_gift_policy.jpg');"></div>
+                            <span class="thumb-badge badge-green"><i class="fa-solid fa-shield-halved"></i> คุณธรรม ITA</span>
+                            <img src="assets/images/no_gift_policy.jpg" alt="ประกาศเจตนารมณ์ No Gift Policy เทศบาลตำบลคุ้งสำเภา" class="card-real-img" onclick="openLightbox(this.src, this.alt)" title="คลิกเพื่อขยายดูภาพเต็ม">
                         </div>
                         <div class="news-body">
-                            <div class="news-meta"><i class="fa-regular fa-calendar"></i> กันยายน 2569 | โดย กองการประปา</div>
-                            <h3 class="news-title">ประชาสัมพันธ์ระบบประปาและแบบสอบถามความพึงพอใจในการให้บริการน้ำประปา</h3>
-                            <p class="news-excerpt">กองการประปา เทศบาลตำบลคุ้งสำเภา ขอเชิญร่วมตอบแบบสอบถามเพื่อนำข้อมูลมาพัฒนาคุณภาพและแรงดันน้ำประปาให้ดียิ่งขึ้น...</p>
-                            <a href="https://www.khungsumpao.go.th/pr%20ประปา.html" target="_blank" class="news-readmore">อ่านรายละเอียด <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="news-card">
-                        <div class="news-thumb">
-                            <span class="thumb-badge badge-green">ITA 2569</span>
-                            <img src="assets/images/no_gift_policy.jpg" alt="นโยบาย No Gift Policy" class="card-real-img">
-                        </div>
-                        <div class="news-body">
-                            <div class="news-meta"><i class="fa-regular fa-calendar"></i> กันยายน 2569 | โดย ศูนย์คุณธรรมและความโปร่งใส</div>
+                            <div class="news-meta"><i class="fa-regular fa-calendar"></i> กันยายน 2569 | โดย ศูนย์คุณธรรม ITA</div>
                             <h3 class="news-title">ประกาศเจตนารมณ์นโยบาย No Gift Policy มุ่งสู่เทศบาลสุจริต โปร่งใส ตรวจสอบได้</h3>
-                            <p class="news-excerpt">ผู้บริหาร ข้าราชการ และบุคลากรเทศบาลตำบลคุ้งสำเภา ร่วมลงนามแสดงเจตจำนงสุจริต งดรับ งดให้ของขวัญในทุกโอกาส...</p>
-                            <a href="#no-gift" class="news-readmore">อ่านรายละเอียด <i class="fa-solid fa-arrow-right"></i></a>
+                            <p class="news-excerpt">คณะผู้บริหาร ข้าราชการ และบุคลากรเทศบาลตำบลคุ้งสำเภา ร่วมลงนามแสดงเจตจำนงสุจริต งดรับของขวัญและของกำนัลทุกชนิดจากการปฏิบัติหน้าที่...</p>
+                            <a href="news-detail.html?id=no-gift-policy" class="news-readmore">อ่านรายละเอียด <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
                 </div>
             </div>
 
-            <!-- Tab 2: ภาพกิจกรรม -->
+            <!-- Tab 2: ภาพกิจกรรม (Smart Containment) -->
             <div class="tab-content" id="tab-activity">
                 <div class="activity-gallery-grid">
                     <div class="activity-photo-box">
-                        <img src="assets/images/banner_activity_1.jpg" alt="ภาพกิจกรรมโครงการพัฒนาชุมชนเทศบาลตำบลคุ้งสำเภา" onclick="openLightbox(this.src, this.alt)" title="คลิกเพื่อดูภาพขนาดใหญ่">
-                        <div class="act-caption">ภาพกิจกรรมโครงการพัฒนาชุมชนเทศบาลตำบลคุ้งสำเภา</div>
+                        <div class="act-ambient-bg" style="background-image: url('assets/images/banner_activity_1.jpg');"></div>
+                        <img src="assets/images/banner_activity_1.jpg" alt="ภาพกิจกรรมโครงการพัฒนาชุมชนและส่งเสริมรายได้ประชาชน" onclick="openLightbox(this.src, this.alt)" title="คลิกเพื่อขยายดูภาพเต็ม">
+                        <div class="act-caption"><i class="fa-solid fa-camera"></i> ภาพกิจกรรมโครงการส่งเสริมอาชีพและพัฒนาชุมชนเทศบาลตำบลคุ้งสำเภา</div>
                     </div>
                     <div class="activity-photo-box">
-                        <img src="assets/images/banner_slide_1.jpg" alt="ภาพบรรยากาศการให้บริการประชาชนนอกสถานที่" onclick="openLightbox(this.src, this.alt)" title="คลิกเพื่อดูภาพขนาดใหญ่">
-                        <div class="act-caption">ภาพบรรยากาศการให้บริการประชาชนนอกสถานที่</div>
+                        <div class="act-ambient-bg" style="background-image: url('assets/images/banner_slide_1.jpg');"></div>
+                        <img src="assets/images/banner_slide_1.jpg" alt="ภาพบรรยากาศการจัดสิ่งอำนวยความสะดวกประชาชน" onclick="openLightbox(this.src, this.alt)" title="คลิกเพื่อขยายดูภาพเต็ม">
+                        <div class="act-caption"><i class="fa-solid fa-camera"></i> ภาพบรรยากาศการพัฒนาสิ่งอำนวยความสะดวกสำหรับประชาชน</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 3: จัดซื้อจัดจ้าง -->
+            <!-- Tab 3: จัดซื้อจัดจ้าง e-GP -->
             <div class="tab-content" id="tab-procure">
                 <div class="procure-table-card">
-                    <table class="table-procure">
-                        <thead>
-                            <tr>
-                                <th>วันที่ประกาศ</th>
-                                <th>รายการจัดซื้อจัดจ้าง</th>
-                                <th>ราคากลาง (บาท)</th>
-                                <th>เอกสารดาวน์โหลด</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>24 ก.ย. 2569</td>
-                                <td>ประกวดราคาจ้างก่อสร้างปรับปรุงผิวจราจรแอสฟัลต์คอนกรีต ด้วยวิธี e-Bidding</td>
-                                <td>1,450,000.00</td>
-                                <td><a href="https://www.khungsumpao.go.th/buy.html" target="_blank" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> ดาวน์โหลด TOR</a></td>
-                            </tr>
-                            <tr>
-                                <td>20 ก.ย. 2569</td>
-                                <td>ประกาศผู้ชนะการเสนอราคา ซื้อวัสดุอุปกรณ์ปรับปรุงภูมิทัศน์และสิ่งแวดล้อม</td>
-                                <td>185,000.00</td>
-                                <td><a href="https://www.khungsumpao.go.th/buy.html" target="_blank" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> รายละเอียด</a></td>
-                            </tr>
-                            <tr>
-                                <td>15 ก.ย. 2569</td>
-                                <td>สรุปผลการดำเนินการจัดซื้อจัดจ้างในรอบเดือน (แบบ สขร.1) ประจำปี 2569</td>
-                                <td>-</td>
-                                <td><a href="https://www.khungsumpao.go.th/buy.html" target="_blank" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> สขร.1 (PDF)</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table-procure">
+                            <thead>
+                                <tr>
+                                    <th>วันที่ประกาศ</th>
+                                    <th>รายการจัดซื้อจัดจ้าง (e-GP)</th>
+                                    <th>ราคากลาง (บาท)</th>
+                                    <th>เอกสารดาวน์โหลด</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="procure-date"><i class="fa-regular fa-calendar"></i> 20 ก.ย. 69</span></td>
+                                    <td><a href="procurement.html" class="procure-link">ประกวดราคาจ้างก่อสร้างปรับปรุงผิวจราจรแอสฟัลท์ติกคอนกรีต ชุมชนบ้านคุ้งสำเภา ด้วยวิธี e-Bidding</a></td>
+                                    <td><strong class="text-gold">1,480,000.00</strong></td>
+                                    <td><a href="procurement.html" class="btn btn-sm btn-gold"><i class="fa-solid fa-file-pdf"></i> ดาวน์โหลด TOR</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="procure-date"><i class="fa-regular fa-calendar"></i> 18 ก.ย. 69</span></td>
+                                    <td><a href="procurement.html" class="procure-link">ประกาศผู้ชนะการเสนอราคา ซื้อสารส้มและคลอรีนสำหรับผลิตน้ำประปา กองการประปา</a></td>
+                                    <td><strong class="text-gold">265,000.00</strong></td>
+                                    <td><a href="procurement.html" class="btn btn-sm btn-gold"><i class="fa-solid fa-file-pdf"></i> ดาวน์โหลด ประกาศ</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="procure-date"><i class="fa-regular fa-calendar"></i> 15 ก.ย. 69</span></td>
+                                    <td><a href="procurement.html" class="procure-link">เผยแพร่แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ พ.ศ. 2569 โครงการขยายเขตท่อประปา</a></td>
+                                    <td><strong class="text-gold">850,000.00</strong></td>
+                                    <td><a href="procurement.html" class="btn btn-sm btn-gold"><i class="fa-solid fa-file-pdf"></i> ดาวน์โหลด แผน</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
             <!-- Tab 4: กิจการสภาเทศบาล -->
             <div class="tab-content" id="tab-council">
-                <div class="procure-table-card">
-                    <table class="table-procure">
-                        <thead>
-                            <tr>
-                                <th>วันที่</th>
-                                <th>หัวข้อประกาศงานกิจการสภาเทศบาล</th>
-                                <th>เอกสาร</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>กันยายน 2569</td>
-                                <td>ประกาศสภาเทศบาลตำบลคุ้งสำเภา เรื่อง เรียกประชุมสภาเทศบาล สมัยสามัญ</td>
-                                <td><a href="https://www.khungsumpao.go.th/council%20pr.html" target="_blank" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> ดูประกาศ</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="civic-article-card" style="margin-bottom: 0;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--primary-dark);"><i class="fa-solid fa-users text-gold"></i> สรุปผลการประชุมสภาเทศบาลตำบลคุ้งสำเภา</h3>
+                    <p style="line-height: 1.7; color: var(--text-muted); margin-bottom: 16px;">รายงานผลการประชุมสภาเทศบาลตำบลคุ้งสำเภา สมัยสามัญ สมัยที่ 3 ประจำปี 2569 พิจารณาให้ความเห็นชอบร่างเทศบัญญัติงบประมาณรายจ่ายประจำปี และข้อซักถามญัตติพัฒนาชุมชน</p>
+                    <a href="council.html" class="btn btn-gold btn-sm"><i class="fa-solid fa-book-open"></i> ดูรายละเอียดการประชุมสภาทั้งหมด</a>
                 </div>
             </div>
 
-            <div class="view-all-row">
-                <a href="https://www.khungsumpao.go.th/public%20relations.html" target="_blank" class="btn btn-outline-dark"><i class="fa-solid fa-list-ul"></i> ดูข่าวสารและประกาศทั้งหมดในระบบเดิม</a>
+            <div class="news-all-cta text-center" style="margin-top: 35px;">
+                <a href="news.html" class="btn btn-outline-civic btn-lg"><i class="fa-solid fa-newspaper"></i> ดูข่าวสารและประกาศทั้งหมดในระบบ</a>
             </div>
         </div>
     </section>

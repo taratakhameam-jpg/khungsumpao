@@ -3629,3 +3629,276 @@ h1, h2, h3, h4, h5, h6,
 .mayor-card:hover .mayor-img {
     transform: scale(1.03);
 }
+
+
+/* ========================================================
+   CIVIC WHITE-LABEL THEME CONFIGURATION TOKENS
+   (ปรับแต่ง 5 ตัวแปรนี้เพื่อ Rebrand นำไปขายต่อ อปท. อื่นๆ ได้ทันที)
+   ======================================================== */
+:root {
+    --civic-primary-navy: #091729;    /* สีกรมท่าทางการหลัก */
+    --civic-royal-blue: #1e3a8a;      /* สีน้ำเงินราชการ */
+    --civic-accent-gold: #f59e0b;     /* สีทองอัตลักษณ์ */
+    --civic-gold-glow: #fbbf24;       /* สีทองสว่าง */
+    --civic-service-blue: #0284c7;    /* สีฟ้าบริการดิจิทัล */
+    --civic-bg-light: #f8fafc;        /* สีพื้นหลังหน้าเว็บ */
+    --civic-surface-white: #ffffff;   /* สีพื้นผิวการ์ด */
+}
+
+/* ========================================================
+   SMART DUAL-LAYER CONTAINMENT (แก้ภาพเพี้ยนและขอบล้น 100%)
+   ======================================================== */
+
+/* 1. News Cards Thumbnail Dual-Layer Ambient Containment */
+.news-thumb {
+    position: relative !important;
+    width: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+    min-height: 200px !important;
+    max-height: 240px !important;
+    overflow: hidden !important;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
+    background: #091322 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.news-thumb .thumb-ambient-bg {
+    position: absolute !important;
+    top: -15px !important; left: -15px !important; right: -15px !important; bottom: -15px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    filter: blur(22px) brightness(0.4) !important;
+    opacity: 0.85 !important;
+    transform: scale(1.15) !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+.news-thumb .card-real-img {
+    position: relative !important;
+    z-index: 2 !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    cursor: zoom-in !important;
+    padding: 2px !important;
+}
+
+.news-card:hover .card-real-img {
+    transform: scale(1.03) !important;
+}
+
+/* 2. Activity Gallery Dual-Layer Ambient Containment */
+.activity-photo-box {
+    position: relative !important;
+    width: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+    min-height: 250px !important;
+    max-height: 320px !important;
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+    background: #091322 !important;
+    border: 1.5px solid var(--border-color) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.activity-photo-box .act-ambient-bg {
+    position: absolute !important;
+    top: -15px !important; left: -15px !important; right: -15px !important; bottom: -15px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    filter: blur(24px) brightness(0.4) !important;
+    opacity: 0.85 !important;
+    transform: scale(1.15) !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+.activity-photo-box img {
+    position: relative !important;
+    z-index: 2 !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    cursor: zoom-in !important;
+}
+
+.activity-photo-box:hover img {
+    transform: scale(1.03) !important;
+}
+
+.activity-photo-box .act-caption {
+    position: absolute !important;
+    bottom: 0 !important; left: 0 !important; right: 0 !important;
+    z-index: 3 !important;
+    background: linear-gradient(180deg, transparent 0%, rgba(9, 19, 34, 0.95) 100%) !important;
+    color: #ffffff !important;
+    padding: 16px 20px 14px !important;
+    font-size: 0.92rem !important;
+    font-weight: 500 !important;
+}
+
+/* Mayor Signature Line with Author */
+.mayor-signature-author {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ========================================================
+   UNIVERSAL RESPONSIVE ARCHITECTURE (รองรับทุกอุปกรณ์ 100%)
+   ======================================================== */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 16px;
+    border-radius: var(--radius-md);
+}
+
+/* Large Screens (Desktops >= 1200px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1260px;
+        padding: 0 24px;
+    }
+}
+
+/* Medium Screens (Tablets / Laptops 768px - 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    .dept-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .news-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .external-banners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mayor-card {
+        padding: 30px;
+        gap: 30px;
+    }
+    .mayor-avatar-frame {
+        width: 220px;
+        height: 290px;
+    }
+}
+
+/* Small Screens (Mobile Phones < 768px) */
+@media (max-width: 767px) {
+    .container {
+        padding: 0 16px;
+    }
+    .access-container {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+        padding: 8px 16px;
+    }
+    .access-tools-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .masthead-container {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        padding: 16px;
+    }
+    .brand-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    .header-utility-badges {
+        display: none; /* ซ่อนในหน้าจอมือถือเพื่อให้โหลดไวและไม่เกะกะ */
+    }
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .hero-featured-showcase {
+        order: -1; /* ให้สไลด์แบนเนอร์ขึ้นมาก่อนบนมือถือ */
+    }
+    .carousel-track {
+        min-height: 240px;
+        height: 260px;
+    }
+    .dept-grid,
+    .news-cards-grid,
+    .external-banners-grid,
+    .activity-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .mayor-card {
+        flex-direction: column;
+        padding: 24px 16px;
+        text-align: center;
+    }
+    .mayor-avatar-frame {
+        width: 180px;
+        height: 240px;
+        margin: 0 auto;
+    }
+    .mayor-text {
+        text-align: left;
+        border-left: none;
+        border-top: 3px solid var(--gold);
+        border-radius: var(--radius-md);
+        padding: 14px;
+    }
+    .mayor-signature-line,
+    .mayor-cta-actions {
+        justify-content: center;
+    }
+    .news-header-flex {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    .news-tabs {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 6px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .footer-bottom-flex {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}

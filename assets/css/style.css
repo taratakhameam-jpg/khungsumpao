@@ -3472,3 +3472,160 @@ h1, h2, h3, h4, h5, h6,
     padding: 6px 18px;
     border-radius: var(--radius-full);
 }
+
+
+/* ========================================================
+   CONTAINMENT & OVERFLOW FIXES (แก้ปัญหาภาพล้นขอบ 100%)
+   ======================================================== */
+
+/* 1. e-Service Highlight Banner Containment */
+.eservice-banner-row {
+    margin: 0 auto 35px;
+    max-width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+    border: 1.5px solid var(--gold);
+    background: #091322;
+    position: relative;
+}
+
+.eservice-highlight-card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    overflow: hidden !important;
+    background: #091322;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border-radius: var(--radius-lg);
+}
+
+.eservice-highlight-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain !important;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    transition: transform 0.4s ease;
+    cursor: zoom-in;
+}
+
+.eservice-banner-row:hover .eservice-highlight-img {
+    transform: scale(1.015);
+}
+
+/* 2. News Cards & Thumbnails (ไม่ให้ภาพล้นขอบการ์ด) */
+.news-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.news-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden !important;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+.news-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    height: 200px;
+    max-height: 220px;
+    overflow: hidden !important;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    background: #0f172a;
+}
+
+.news-thumb .card-real-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.news-card:hover .card-real-img {
+    transform: scale(1.05);
+}
+
+/* 3. Activity Gallery Grid & Photo Boxes */
+.activity-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.activity-photo-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    max-height: 260px;
+    border-radius: var(--radius-lg);
+    overflow: hidden !important;
+    box-shadow: var(--shadow-md);
+    background: #0f172a;
+    border: 1px solid var(--border-color);
+}
+
+.activity-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: zoom-in;
+}
+
+.activity-photo-box:hover img {
+    transform: scale(1.05);
+}
+
+/* 4. Mayor Avatar Frame Polish */
+.mayor-avatar-frame {
+    position: relative;
+    width: 240px;
+    height: 320px;
+    flex-shrink: 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden !important;
+    border: 3px solid var(--gold);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    background: #0f172a;
+}
+
+.mayor-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    object-position: center 15%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.mayor-card:hover .mayor-img {
+    transform: scale(1.03);
+}

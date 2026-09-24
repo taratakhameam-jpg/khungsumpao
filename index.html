@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เทศบาลตำบลคุ้งสำเภา | อำเภอมโนรมย์ จังหวัดชัยนาท (Official Portal)</title>
+    <title>เทศบาลตำบลคุ้งสำเภา | อำเภอมโนรมย์ จังหวัดชัยนาท (Official Civic Portal)</title>
     <meta name="description" content="เว็บไซต์ทางการเทศบาลตำบลคุ้งสำเภา อ.มโนรมย์ จ.ชัยนาท บริการประชาชนออนไลน์ e-Service ข้อมูลความโปร่งใส ITA/LPA และข่าวสารประชาสัมพันธ์">
     
     <!-- Google Fonts: Sarabun & Outfit -->
@@ -23,9 +23,11 @@
     <div class="top-bar">
         <div class="container top-bar-content">
             <div class="top-bar-left">
-                <span><i class="fa-solid fa-building-columns"></i> องค์กรปกครองส่วนท้องถิ่นดิจิทัล (Smart Municipality)</span>
+                <span><i class="fa-solid fa-building-columns"></i> องค์กรปกครองส่วนท้องถิ่นดิจิทัล (Smart Municipality 4.0)</span>
                 <span class="divider">|</span>
                 <span><i class="fa-solid fa-phone"></i> โทร. 056-491-325</span>
+                <span class="divider">|</span>
+                <a href="https://khungsumpao.c.eoffice.go.th/portal/" target="_blank" class="eoffice-link"><i class="fa-solid fa-network-wired"></i> ระบบ e-Office สารบรรณอิเล็กทรอนิกส์</a>
             </div>
             <div class="top-bar-right">
                 <!-- Accessibility Controls (LPA ด้านการอำนวยความสะดวก) -->
@@ -48,16 +50,14 @@
         </div>
     </div>
 
-    <!-- 2. Main Header & Identity -->
+    <!-- 2. Main Header & Identity with Official Logo -->
     <header class="main-header">
         <div class="container header-container">
             <div class="brand-identity">
-                <!-- Golden Ship Crest Emblem -->
-                <div class="emblem-wrapper">
-                    <div class="emblem-badge">
-                        <i class="fa-solid fa-ship"></i>
-                    </div>
-                </div>
+                <!-- Official Emblem Logo -->
+                <a href="index.html" class="emblem-wrapper" title="เทศบาลตำบลคุ้งสำเภา">
+                    <img src="assets/images/logo.png" alt="ตราสัญลักษณ์เทศบาลตำบลคุ้งสำเภา" class="official-logo-img">
+                </a>
                 <div class="brand-text">
                     <h1 class="brand-title-th">เทศบาลตำบลคุ้งสำเภา</h1>
                     <p class="brand-sub-th">อำเภอมโนรมย์ จังหวัดชัยนาท</p>
@@ -81,43 +81,55 @@
         </div>
     </header>
 
-    <!-- 3. Navigation Bar (สอดคล้องตามโครงสร้าง ITA / OIT O1-O43) -->
+    <!-- 3. Navigation Bar (สอดคล้องตามโครงสร้างจริงของเทศบาลตำบลคุ้งสำเภา & ITA O1-O43) -->
     <nav class="main-nav" id="mainNav">
         <div class="container nav-container">
             <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="เปิดเมนู">
                 <i class="fa-solid fa-bars"></i> เมนูหลัก
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li class="nav-item active"><a href="#" class="nav-link"><i class="fa-solid fa-house"></i> หน้าแรก</a></li>
+                <li class="nav-item active"><a href="#" class="nav-link"><i class="fa-solid fa-house"></i> หน้าหลัก</a></li>
                 <li class="nav-item has-dropdown">
-                    <a href="#about" class="nav-link">ข้อมูลองค์กร <i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="#about" class="nav-link">เกี่ยวกับเทศบาล <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#about"><i class="fa-solid fa-landmark"></i> ประวัติความเป็นมา</a></li>
-                        <li><a href="#vision"><i class="fa-solid fa-compass"></i> วิสัยทัศน์และพันธกิจ</a></li>
-                        <li><a href="#mayor"><i class="fa-solid fa-user-tie"></i> ทำเนียบผู้บริหาร</a></li>
+                        <li><a href="#about"><i class="fa-solid fa-landmark"></i> ประวัติเทศบาลตำบลคุ้งสำเภา</a></li>
+                        <li><a href="#info"><i class="fa-solid fa-circle-info"></i> ข้อมูลทั่วไปของเทศบาล</a></li>
+                        <li><a href="#vision"><i class="fa-solid fa-compass"></i> วิสัยทัศน์และนโยบายการพัฒนา</a></li>
+                        <li><a href="#structure"><i class="fa-solid fa-sitemap"></i> โครงสร้างเทศบาล</a></li>
+                        <li><a href="#duties"><i class="fa-solid fa-scale-balanced"></i> อำนาจหน้าที่และกฎหมายที่เกี่ยวข้อง</a></li>
+                        <li><a href="#ethics"><i class="fa-solid fa-award"></i> ประมวลจริยธรรมสำหรับเจ้าหน้าที่</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#executives" class="nav-link">ผู้บริหาร & สภา <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#mayor"><i class="fa-solid fa-user-tie"></i> คณะผู้บริหารเทศบาล</a></li>
                         <li><a href="#council"><i class="fa-solid fa-users"></i> สมาชิกสภาเทศบาล</a></li>
-                        <li><a href="#structure"><i class="fa-solid fa-sitemap"></i> โครงสร้างส่วนราชการ</a></li>
-                        <li><a href="#authority"><i class="fa-solid fa-scale-balanced"></i> อำนาจหน้าที่ตามกฎหมาย</a></li>
+                        <li><a href="#leaders"><i class="fa-solid fa-user-gear"></i> หัวหน้าส่วนราชการ</a></li>
+                        <li><a href="#departments"><i class="fa-solid fa-building-user"></i> 7 ส่วนราชการในสังกัด</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
                     <a href="#eservice" class="nav-link">บริการประชาชน (e-Service) <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#eservice"><i class="fa-solid fa-laptop-file"></i> ศูนย์รวม e-Service ท้องถิ่น</a></li>
+                        <li><a href="#eservice-water"><i class="fa-solid fa-faucet-drip"></i> คำร้องขอใช้น้ำประปาออนไลน์</a></li>
+                        <li><a href="#eservice-venue"><i class="fa-solid fa-hotel"></i> คำร้องขอใช้สถานที่ราชการ</a></li>
+                        <li><a href="#eservice-disaster"><i class="fa-solid fa-shield-heart"></i> ขอรับการช่วยเหลือผู้ประสบสาธารณภัย</a></li>
                         <li><a href="#complain"><i class="fa-solid fa-envelope-open-text"></i> ยื่นคำร้องเรียน-ร้องทุกข์ออนไลน์</a></li>
                         <li><a href="#tax"><i class="fa-solid fa-receipt"></i> ชำระภาษีที่ดินและป้ายออนไลน์</a></li>
-                        <li><a href="#building"><i class="fa-solid fa-file-signature"></i> ขออนุญาตก่อสร้างอาคาร</a></li>
-                        <li><a href="#welfare"><i class="fa-solid fa-hand-holding-heart"></i> ตรวจสอบสิทธิเบี้ยยังชีพผู้สูงอายุ/คนพิการ</a></li>
+                        <li><a href="#building"><i class="fa-solid fa-file-signature"></i> ขออนุญาตก่อสร้าง/ขุดดินถมดิน</a></li>
+                        <li><a href="#billboard"><i class="fa-solid fa-signs-post"></i> แจ้งเบาะแสป้ายโฆษณาผิดระเบียบ</a></li>
                         <li><a href="#queue"><i class="fa-solid fa-calendar-check"></i> นัดหมายติดต่อราชการล่วงหน้า</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
                     <a href="#news" class="nav-link">ข่าวสาร & ประกาศ <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#news-pr"><i class="fa-regular fa-newspaper"></i> ข่าวประชาสัมพันธ์เทศบาล</a></li>
+                        <li><a href="#news-pr"><i class="fa-regular fa-newspaper"></i> ข่าวประชาสัมพันธ์ทั่วไป</a></li>
                         <li><a href="#procure"><i class="fa-solid fa-cart-shopping"></i> ประกาศจัดซื้อจัดจ้าง (e-GP)</a></li>
-                        <li><a href="#announce"><i class="fa-solid fa-scroll"></i> ประกาศเทศบาล/ระเบียบข้อบังคับ</a></li>
-                        <li><a href="#jobs"><i class="fa-solid fa-briefcase"></i> ประกาศรับสมัครงาน</a></li>
+                        <li><a href="#council-pr"><i class="fa-solid fa-landmark-dome"></i> ประกาศงานกิจการสภาเทศบาล</a></li>
+                        <li><a href="#water-pr"><i class="fa-solid fa-droplet"></i> ข่าวประชาสัมพันธ์ระบบประปา</a></li>
+                        <li><a href="#hr-pr"><i class="fa-solid fa-id-card"></i> ข่าวการบริหารงานบุคคล / รับสมัครงาน</a></li>
                         <li><a href="#annual-report"><i class="fa-solid fa-book-open"></i> วารสารและรายงานประจำปี</a></li>
                     </ul>
                 </li>
@@ -126,34 +138,34 @@
                     <ul class="dropdown-menu">
                         <li><a href="#ita-oit"><i class="fa-solid fa-shield-halved"></i> การประเมินคุณธรรมและความโปร่งใส (ITA)</a></li>
                         <li><a href="#no-gift"><i class="fa-solid fa-handshake-slash"></i> นโยบายไม่รับของขวัญ (No Gift Policy)</a></li>
-                        <li><a href="#plans"><i class="fa-solid fa-chart-line"></i> แผนพัฒนาท้องถิ่น & แผนปฏิบัติราชการ</a></li>
+                        <li><a href="#plans"><i class="fa-solid fa-chart-line"></i> ข้อมูลแผนพัฒนาเทศบาล</a></li>
                         <li><a href="#budget"><i class="fa-solid fa-coins"></i> เทศบัญญัติงบประมาณรายจ่าย</a></li>
                         <li><a href="#skr1"><i class="fa-solid fa-file-invoice-dollar"></i> สรุปผลการจัดซื้อจัดจ้าง (สขร.1)</a></li>
                         <li><a href="#whistleblower"><i class="fa-solid fa-user-secret"></i> ศูนย์รับเรื่องทุจริตและประพฤติมิชอบ</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a href="#contact" class="nav-link">ติดต่อเรา</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">ติดต่อเทศบาล</a></li>
             </ul>
             <div class="nav-search">
-                <input type="text" placeholder="ค้นหาบริการ e-Service..." id="navSearchInput">
+                <input type="text" placeholder="ค้นหาข้อมูล / บริการ..." id="navSearchInput">
                 <button type="button" aria-label="ค้นหา"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
     </nav>
 
-    <!-- 4. Hero Section: Modern Civic Showcase & Vision -->
+    <!-- 4. Hero Section: Modern Civic Showcase with Official Slides -->
     <section class="hero-section">
         <div class="hero-backdrop"></div>
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <i class="fa-solid fa-water"></i> นครโบราณริมฝั่งเจ้าพระยา สู่เทศบาลอัจฉริยะ 4.0
+                    <i class="fa-solid fa-ship"></i> เมืองท่าการค้าโบราณริมน้ำเจ้าพระยา สู่เทศบาลอัจฉริยะ 4.0
                 </div>
                 <h2 class="hero-heading">ยินดีต้อนรับสู่ <span class="text-gold">เทศบาลตำบลคุ้งสำเภา</span></h2>
                 <div class="hero-vision-card">
                     <div class="vision-icon"><i class="fa-solid fa-quote-left"></i></div>
                     <div class="vision-text">
-                        <span class="vision-title">วิสัยทัศน์การพัฒนา (Vision 2026)</span>
+                        <span class="vision-title">วิสัยทัศน์การพัฒนาท้องถิ่น (Vision)</span>
                         <p class="vision-quote">"เมืองน่าอยู่ คุณภาพชีวิตได้มาตรฐาน ระบบราชการ 4.0 สืบสานวัฒนธรรม ส่งเสริมศาสตร์เทคโนโลยี น้อมนำเศรษฐกิจพอเพียง"</p>
                     </div>
                 </div>
@@ -163,38 +175,16 @@
                 </div>
             </div>
 
-            <!-- Quick Service Floating Card Desk -->
-            <div class="hero-quick-services">
-                <h3 class="quick-title"><i class="fa-solid fa-bolt"></i> ทางลัดบริการประชาชนด่วน</h3>
-                <div class="quick-cards-grid">
-                    <a href="#complain" class="quick-card">
-                        <div class="q-icon bg-orange"><i class="fa-solid fa-bullhorn"></i></div>
-                        <div class="q-desc">
-                            <h4>ร้องเรียน ร้องทุกข์</h4>
-                            <p>แจ้งเรื่อง 24 ชม. ตรวจสอบสถานะได้</p>
+            <!-- Hero Slideshow & Featured Banner from Official Site -->
+            <div class="hero-featured-showcase">
+                <div class="showcase-card">
+                    <div class="showcase-img-wrap">
+                        <img src="assets/images/banner_slide_1.jpg" alt="ภาพประชาสัมพันธ์เทศบาลตำบลคุ้งสำเภา" class="showcase-img">
+                        <div class="showcase-overlay">
+                            <span class="showcase-tag"><i class="fa-solid fa-bullhorn"></i> ข่าวประชาสัมพันธ์ล่าสุด</span>
+                            <h4 class="showcase-caption">เทศบาลตำบลคุ้งสำเภา มุ่งมั่นพัฒนาคุณภาพชีวิต เพื่อประโยชน์สุขของประชาชน</h4>
                         </div>
-                    </a>
-                    <a href="#tax" class="quick-card">
-                        <div class="q-icon bg-blue"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                        <div class="q-desc">
-                            <h4>ภาษีท้องถิ่น</h4>
-                            <p>ตรวจสอบและประเมินภาษีที่ดิน/ป้าย</p>
-                        </div>
-                    </a>
-                    <a href="#building" class="quick-card">
-                        <div class="q-icon bg-teal"><i class="fa-solid fa-building-user"></i></div>
-                        <div class="q-desc">
-                            <h4>ขออนุญาตก่อสร้าง</h4>
-                            <p>ยื่นคำร้อง อ.1 ดาวน์โหลดแบบฟอร์ม</p>
-                        </div>
-                    </a>
-                    <a href="#welfare" class="quick-card">
-                        <div class="q-icon bg-purple"><i class="fa-solid fa-heart-pulse"></i></div>
-                        <div class="q-desc">
-                            <h4>สวัสดิการชุมชน</h4>
-                            <p>ลงทะเบียนเบี้ยยังชีพ / เบี้ยคนพิการ</p>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -214,147 +204,214 @@
                 <div class="mayor-message">
                     <span class="sub-lead">สารจากผู้บริหารเทศบาลตำบลคุ้งสำเภา</span>
                     <h3 class="mayor-name">นายชาตรีกาล สกุลสุริยะ</h3>
-                    <p class="mayor-role">นายกเทศมนตรีตำบลคุ้งสำเภา</p>
+                    <p class="mayor-role">นายกเทศมนตรีตำบลคุ้งสำเภา อำเภอมโนรมย์ จังหวัดชัยนาท</p>
                     <div class="mayor-text">
                         <p>“เทศบาลตำบลคุ้งสำเภา มุ่งมั่นขับเคลื่อนการพัฒนาท้องถิ่นสู่การเป็นองค์กรอัจฉริยะ ยึดหลักธรรมาภิบาล ความโปร่งใส ตรวจสอบได้ พร้อมเปิดรับการมีส่วนร่วมของพี่น้องประชาชน เพื่อยกระดับคุณภาพชีวิต สร้างสุขอย่างยั่งยืนบนวิถีแห่งความพอเพียง”</p>
                     </div>
                     <div class="mayor-signature-line">
                         <div class="policy-pill"><i class="fa-solid fa-check-circle"></i> มุ่งมั่นปฏิบัติงานด้วยความซื่อสัตย์สุจริต</div>
-                        <div class="policy-pill"><i class="fa-solid fa-check-circle"></i> ขับเคลื่อนนโยบาย No Gift Policy 100%</div>
+                        <div class="policy-pill"><i class="fa-solid fa-shield-check"></i> ขับเคลื่อนนโยบาย No Gift Policy 100%</div>
+                        <div class="policy-pill"><i class="fa-solid fa-handshake"></i> เปิดโอกาสการมีส่วนร่วมของประชาชน</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. Citizen e-Service Portal (LPA ด้านการบริการสาธารณะ) -->
-    <section class="section-eservice" id="eservice">
+    <!-- 6. 7 ส่วนราชการในสังกัดเทศบาลตำบลคุ้งสำเภา -->
+    <section class="section-departments" id="departments">
         <div class="container">
             <div class="section-header text-center">
-                <div class="section-tag"><i class="fa-solid fa-computer"></i> e-Government Services</div>
-                <h2 class="section-title">บริการประชาชนออนไลน์ (e-Service Portal)</h2>
-                <p class="section-subtitle">สะดวก รวดเร็ว ปลอดภัย ไม่ต้องเดินทางมาเทศบาล พร้อมตรวจสอบสถานะแบบเรียลไทม์</p>
+                <div class="section-tag"><i class="fa-solid fa-sitemap"></i> Organization Structure</div>
+                <h2 class="section-title">โครงสร้างส่วนราชการ เทศบาลตำบลคุ้งสำเภา</h2>
+                <p class="section-subtitle">พร้อมให้บริการประชาชนอย่างรวดเร็ว โปร่งใส และมีประสิทธิภาพ</p>
             </div>
-
-            <div class="eservice-grid">
-                <div class="eservice-card">
-                    <div class="eservice-icon-wrap"><i class="fa-solid fa-envelope-open-text"></i></div>
-                    <h3>ระบบรับเรื่องราวร้องทุกข์ออนไลน์</h3>
-                    <p>แจ้งปัญหาไฟฟ้าดับ ถนนชำรุด น้ำประปา ขยะ หรือเหตุเดือดร้อนรำคาญ รับรหัส Tracking ทันที</p>
-                    <a href="#complain" class="card-btn">ยื่นเรื่องร้องทุกข์ <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="dept-grid">
+                <div class="dept-card">
+                    <div class="dept-icon"><i class="fa-solid fa-landmark"></i></div>
+                    <h4>สำนักปลัดเทศบาล</h4>
+                    <p>งานธุรการ งานนิติการ งานป้องกันและบรรเทาสาธารณภัย</p>
                 </div>
-                <div class="eservice-card">
-                    <div class="eservice-icon-wrap"><i class="fa-solid fa-receipt"></i></div>
-                    <h3>ระบบชำระภาษีท้องถิ่นออนไลน์</h3>
-                    <p>ตรวจสอบยอดภาษีที่ดินและสิ่งปลูกสร้าง ภาษีป้าย ชำระผ่าน QR Code พร้อมใบเสร็จอิเล็กทรอนิกส์</p>
-                    <a href="#tax" class="card-btn">ตรวจสอบภาษี <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="dept-card">
+                    <div class="dept-icon"><i class="fa-solid fa-coins"></i></div>
+                    <h4>กองคลัง</h4>
+                    <p>งานการเงิน บัญชี พัฒนารายได้ จัดเก็บภาษี และงานพัสดุ</p>
                 </div>
-                <div class="eservice-card">
-                    <div class="eservice-icon-wrap"><i class="fa-solid fa-house-chimney-crack"></i></div>
-                    <h3>ขออนุญาตก่อสร้าง/ดัดแปลงอาคาร</h3>
-                    <p>ยื่นคำขออนุญาตปลูกสร้าง ขุดดิน ถมดิน ดาวน์โหลดแบบแปลนมาตรฐาน และติดตามผลอนุมัติ</p>
-                    <a href="#building" class="card-btn">ยื่นคำร้องก่อสร้าง <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="dept-card">
+                    <div class="dept-icon"><i class="fa-solid fa-trowel-bricks"></i></div>
+                    <h4>กองช่าง</h4>
+                    <p>งานก่อสร้าง ออกแบบควบคุมอาคาร ผังเมือง และไฟฟ้าสาธารณะ</p>
                 </div>
-                <div class="eservice-card">
-                    <div class="eservice-icon-wrap"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-                    <h3>ลงทะเบียนเบี้ยยังชีพ / สวัสดิการ</h3>
-                    <p>ระบบลงทะเบียนเบี้ยยังชีพผู้สูงอายุ ผู้พิการ และเงินอุดหนุนเด็กแรกเกิด ตรวจสอบสิทธิได้ตลอด 24 ชม.</p>
-                    <a href="#welfare" class="card-btn">ลงทะเบียนสิทธิ <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="dept-card">
+                    <div class="dept-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h4>กองสาธารณสุขและสิ่งแวดล้อม</h4>
+                    <p>งานรักษาความสะอาด งานสุขาภิบาล และส่งเสริมสุขภาพ</p>
                 </div>
-                <div class="eservice-card">
-                    <div class="eservice-icon-wrap"><i class="fa-solid fa-calendar-check"></i></div>
-                    <h3>จองคิวติดต่อราชการล่วงหน้า</h3>
-                    <p>นัดหมายฝ่ายทะเบียนราษฎร ฝ่ายการคลัง กองช่าง ลดระยะเวลารอคอย บริการรวดเร็วทันใจ</p>
-                    <a href="#queue" class="card-btn">จองคิวออนไลน์ <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="dept-card">
+                    <div class="dept-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h4>กองการศึกษา</h4>
+                    <p>การศึกษาปฐมวัย ศาสนา วัฒนธรรม และภูมิปัญญาท้องถิ่น</p>
                 </div>
-                <div class="eservice-card">
-                    <div class="eservice-icon-wrap"><i class="fa-solid fa-trash-can-arrow-up"></i></div>
-                    <h3>ขอรับบริการเก็บขยะชิ้นใหญ่ / สิ่งปฏิกูล</h3>
-                    <p>ขอรับบริการเก็บกิ่งไม้ ขยะชิ้นใหญ่ และรถดูดสิ่งปฏิกูลเทศบาลตำบลคุ้งสำเภาอย่างเป็นระบบ</p>
-                    <a href="#services" class="card-btn">ขอรับบริการ <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="dept-card">
+                    <div class="dept-icon"><i class="fa-solid fa-faucet-drip"></i></div>
+                    <h4>กองการประปา</h4>
+                    <p>การผลิตและจ่ายน้ำประปาสะอาดได้มาตรฐาน บริการทั่วถึง</p>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h4>หน่วยตรวจสอบภายใน</h4>
+                    <p>การประเมินการควบคุมภายในและการตรวจสอบเพื่อธรรมาภิบาล</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. ITA & Transparency Gateway (ตัวชี้วัด OIT O1-O43) -->
+    <!-- 7. Citizen e-Service Portal (ข้อมูล e-Service จริงของคุ้งสำเภา) -->
+    <section class="section-eservice" id="eservice">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-tag"><i class="fa-solid fa-computer"></i> e-Government Services</div>
+                <h2 class="section-title">บริการประชาชนออนไลน์ (e-Service Portal)</h2>
+                <p class="section-subtitle">สะดวกรวดเร็ว ยื่นคำร้องผ่านระบบออนไลน์ได้ตลอด 24 ชั่วโมง โดยไม่ต้องเดินทางมาสำนักงาน</p>
+            </div>
+
+            <!-- Banner e-Service from site -->
+            <div class="eservice-banner-row">
+                <div class="eservice-highlight-card">
+                    <img src="assets/images/banner_eservice.jpg" alt="ระบบ e-Service เทศบาลตำบลคุ้งสำเภา" class="eservice-highlight-img">
+                </div>
+            </div>
+
+            <div class="eservice-grid">
+                <div class="eservice-card">
+                    <div class="eservice-icon-wrap"><i class="fa-solid fa-faucet-drip"></i></div>
+                    <h3>คำร้องขอใช้น้ำประปาออนไลน์</h3>
+                    <p>ยื่นคำร้องขอติดตั้งมิเตอร์น้ำประปาใหม่ ย้ายมาตร โอนเปลี่ยนชื่อผู้ใช้น้ำประปาของเทศบาลตำบลคุ้งสำเภา</p>
+                    <a href="https://www.khungsumpao.go.th/water/water_service_form.html" target="_blank" class="card-btn">ยื่นคำร้องขอใช้น้ำ <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="eservice-card">
+                    <div class="eservice-icon-wrap"><i class="fa-solid fa-hotel"></i></div>
+                    <h3>คำร้องขอใช้สถานที่ราชการ</h3>
+                    <p>ยื่นคำร้องขอใช้อาคารอเนกประสงค์ ลานกีฬา หรือสถานที่ราชการในสังกัดเทศบาลตำบลคุ้งสำเภา</p>
+                    <a href="https://www.khungsumpao.go.th/where/venue_request_form.html" target="_blank" class="card-btn">ยื่นขอใช้สถานที่ <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="eservice-card">
+                    <div class="eservice-icon-wrap"><i class="fa-solid fa-shield-heart"></i></div>
+                    <h3>ขอรับการช่วยเหลือผู้ประสบสาธารณภัย</h3>
+                    <p>แบบขอรับความช่วยเหลือกรณีประสบอุทกภัย วาตภัย อัคคีภัย หรือภัยพิบัติฉุกเฉินในเขตตำบลคุ้งสำเภา</p>
+                    <a href="https://www.khungsumpao.go.th/sos/disaster_reg_form.html" target="_blank" class="card-btn">ยื่นขอความช่วยเหลือ <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="eservice-card">
+                    <div class="eservice-icon-wrap"><i class="fa-solid fa-bullhorn"></i></div>
+                    <h3>ระบบรับเรื่องราวร้องเรียน-ร้องทุกข์</h3>
+                    <p>แจ้งปัญหาไฟฟ้าดับ ถนนชำรุด ท่อระบายน้ำ ขยะ หรือเหตุเดือดร้อนรำคาญ รับรหัสติดตามสถานะทันที</p>
+                    <a href="https://www.khungsumpao.go.th/ร้องเรียน/complaint_form.html" target="_blank" class="card-btn">แจ้งเรื่องร้องทุกข์ <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="eservice-card">
+                    <div class="eservice-icon-wrap"><i class="fa-solid fa-receipt"></i></div>
+                    <h3>ยื่นแบบและชำระภาษีท้องถิ่นออนไลน์</h3>
+                    <p>ตรวจสอบและยื่นแบบภาษีที่ดินและสิ่งปลูกสร้าง ภาษีป้าย ชำระสะดวกผ่านระบบ QR Code ธนาคาร</p>
+                    <a href="https://www.khungsumpao.go.th/ยื่นแบบ.html" target="_blank" class="card-btn">ยื่นแบบภาษี <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="eservice-card">
+                    <div class="eservice-icon-wrap"><i class="fa-solid fa-signs-post"></i></div>
+                    <h3>แจ้งเบาะแสป้ายโฆษณาผิดระเบียบ</h3>
+                    <p>ช่องทางสำหรับประชาชนในการแจ้งเบาะแสป้ายโฆษณาที่ติดตั้งในที่สาธารณะโดยไม่ได้รับอนุญาต</p>
+                    <a href="https://www.khungsumpao.go.th/ป้าย/complaint_form.html" target="_blank" class="card-btn">แจ้งเบาะแสป้าย <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. ITA & Transparency Gateway with Real No Gift Policy Image -->
     <section class="section-ita" id="ita">
         <div class="container">
             <div class="ita-banner-card">
                 <div class="ita-header-row">
                     <div class="ita-badge-box">
                         <i class="fa-solid fa-shield-halved"></i>
-                        <span>ITA & Open Data</span>
+                        <span>ITA & Open Data 2026</span>
                     </div>
                     <div class="ita-status-pill">การประเมินคุณธรรมและความโปร่งใส ประจำปีงบประมาณ พ.ศ. 2569</div>
                 </div>
-                <div class="ita-content-body">
-                    <h2>ศูนย์ข้อมูลข่าวสารและความโปร่งใสภาครัฐ (OIT)</h2>
-                    <p>เทศบาลตำบลคุ้งสำเภา ยึดมั่นในการเปิดเผยข้อมูลสาธารณะตามพระราชบัญญัติข้อมูลข่าวสารของราชการ พ.ศ. 2540 และเกณฑ์ประเมิน ITA ภายใต้สำนักงาน ป.ป.ช.</p>
-                </div>
+                
+                <div class="ita-split-content">
+                    <div class="ita-text-col">
+                        <h2>ศูนย์ข้อมูลข่าวสารและความโปร่งใสภาครัฐ (OIT)</h2>
+                        <p>เทศบาลตำบลคุ้งสำเภา ยึดมั่นในการเปิดเผยข้อมูลสาธารณะตามพระราชบัญญัติข้อมูลข่าวสารของราชการ พ.ศ. 2540 และเกณฑ์ประเมิน ITA ภายใต้สำนักงาน ป.ป.ช.</p>
+                        
+                        <div class="ita-quick-grid">
+                            <a href="#no-gift" class="ita-item">
+                                <div class="ita-icon"><i class="fa-solid fa-handshake-slash"></i></div>
+                                <div class="ita-info">
+                                    <strong>นโยบาย No Gift Policy</strong>
+                                    <span>งดรับ งดให้ของขวัญในทุกเทศกาล</span>
+                                </div>
+                            </a>
+                            <a href="https://www.khungsumpao.go.th/Development%20plan.html" target="_blank" class="ita-item">
+                                <div class="ita-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                                <div class="ita-info">
+                                    <strong>แผนพัฒนาเทศบาล</strong>
+                                    <span>แผนยุทธศาสตร์และแผนดำเนินงาน</span>
+                                </div>
+                            </a>
+                            <a href="https://www.khungsumpao.go.th/ordinance.html" target="_blank" class="ita-item">
+                                <div class="ita-icon"><i class="fa-solid fa-coins"></i></div>
+                                <div class="ita-info">
+                                    <strong>เทศบัญญัติงบประมาณ</strong>
+                                    <span>รายงานการรับ-จ่ายเงินและการคลัง</span>
+                                </div>
+                            </a>
+                            <a href="https://www.khungsumpao.go.th/buy.html" target="_blank" class="ita-item">
+                                <div class="ita-icon"><i class="fa-solid fa-file-contract"></i></div>
+                                <div class="ita-info">
+                                    <strong>สรุปการจัดซื้อจัดจ้าง (สขร.1)</strong>
+                                    <span>เผยแพร่ผลการจัดซื้อจัดจ้างรายเดือน</span>
+                                </div>
+                            </a>
+                            <a href="https://www.khungsumpao.go.th/code%20of%20ethics.html" target="_blank" class="ita-item">
+                                <div class="ita-icon"><i class="fa-solid fa-award"></i></div>
+                                <div class="ita-info">
+                                    <strong>ประมวลจริยธรรมเจ้าหน้าที่</strong>
+                                    <span>แนวปฏิบัติและมาตรฐานทางจริยธรรม</span>
+                                </div>
+                            </a>
+                            <a href="https://www.khungsumpao.go.th/จนท.ทุจริต/complaint_form.html" target="_blank" class="ita-item highlight-red">
+                                <div class="ita-icon"><i class="fa-solid fa-user-secret"></i></div>
+                                <div class="ita-info">
+                                    <strong>แจ้งเบาะแสการทุจริต</strong>
+                                    <span>ช่องทางร้องเรียนลับและคุ้มครองพยาน</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
-                <div class="ita-quick-grid">
-                    <a href="#no-gift" class="ita-item">
-                        <div class="ita-icon"><i class="fa-solid fa-handshake-slash"></i></div>
-                        <div class="ita-info">
-                            <strong>นโยบาย No Gift Policy</strong>
-                            <span>งดรับ งดให้ของขวัญในทุกเทศกาล</span>
+                    <!-- No Gift Policy Real Official Banner -->
+                    <div class="ita-image-col">
+                        <div class="no-gift-frame">
+                            <img src="assets/images/no_gift_policy.jpg" alt="นโยบาย No Gift Policy เทศบาลตำบลคุ้งสำเภา" class="no-gift-img">
+                            <span class="no-gift-caption"><i class="fa-solid fa-certificate"></i> ประกาศเจตนารมณ์ No Gift Policy เทศบาลตำบลคุ้งสำเภา</span>
                         </div>
-                    </a>
-                    <a href="#plans" class="ita-item">
-                        <div class="ita-icon"><i class="fa-solid fa-chart-pie"></i></div>
-                        <div class="ita-info">
-                            <strong>แผนพัฒนาท้องถิ่น 5 ปี</strong>
-                            <span>แผนดำเนินงานและติดตามผลประจำปี</span>
-                        </div>
-                    </a>
-                    <a href="#procure" class="ita-item">
-                        <div class="ita-icon"><i class="fa-solid fa-file-contract"></i></div>
-                        <div class="ita-info">
-                            <strong>สรุปการจัดซื้อจัดจ้าง (สขร.1)</strong>
-                            <span>เผยแพร่ผลการจัดซื้อจัดจ้างรายเดือน</span>
-                        </div>
-                    </a>
-                    <a href="#budget" class="ita-item">
-                        <div class="ita-icon"><i class="fa-solid fa-coins"></i></div>
-                        <div class="ita-info">
-                            <strong>เทศบัญญัติงบประมาณ</strong>
-                            <span>รายงานการรับ-จ่ายเงินและการคลัง</span>
-                        </div>
-                    </a>
-                    <a href="#structure" class="ita-item">
-                        <div class="ita-icon"><i class="fa-solid fa-sitemap"></i></div>
-                        <div class="ita-info">
-                            <strong>โครงสร้างและการบริหารงาน</strong>
-                            <span>อำนาจหน้าที่และแผนบริหารงานบุคคล</span>
-                        </div>
-                    </a>
-                    <a href="#whistleblower" class="ita-item highlight-red">
-                        <div class="ita-icon"><i class="fa-solid fa-user-secret"></i></div>
-                        <div class="ita-info">
-                            <strong>แจ้งเบาะแสการทุจริต</strong>
-                            <span>ช่องทางร้องเรียนลับและคุ้มครองพยาน</span>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 8. Public News & Procurement Center (ศูนย์ข่าวสารและประกาศ) -->
+    <!-- 9. Public News & Activities with Real Images -->
     <section class="section-news" id="news">
         <div class="container">
             <div class="section-header news-header-flex">
                 <div>
                     <div class="section-tag"><i class="fa-regular fa-newspaper"></i> ข่าวสารและกิจกรรม</div>
-                    <h2 class="section-title">ข่าวสารประชาสัมพันธ์ & จัดซื้อจัดจ้าง</h2>
+                    <h2 class="section-title">ข่าวสารประชาสัมพันธ์ & ภาพกิจกรรม</h2>
                 </div>
                 <!-- News Filter Tabs -->
                 <div class="news-tabs" id="newsTabs">
                     <button class="tab-btn active" data-tab="tab-pr">ข่าวประชาสัมพันธ์</button>
+                    <button class="tab-btn" data-tab="tab-activity">ภาพกิจกรรมเทศบาล</button>
                     <button class="tab-btn" data-tab="tab-procure">ประกาศจัดซื้อจัดจ้าง</button>
-                    <button class="tab-btn" data-tab="tab-announce">ประกาศเทศบาล</button>
-                    <button class="tab-btn" data-tab="tab-jobs">รับสมัครงาน</button>
+                    <button class="tab-btn" data-tab="tab-council">กิจการสภาเทศบาล</button>
                 </div>
             </div>
 
@@ -363,45 +420,60 @@
                 <div class="news-cards-grid">
                     <article class="news-card">
                         <div class="news-thumb">
-                            <div class="thumb-badge">ข่าวเด่น</div>
-                            <div class="thumb-placeholder"><i class="fa-regular fa-image"></i></div>
+                            <span class="thumb-badge">กิจกรรมเด่น</span>
+                            <img src="assets/images/banner_activity_1.jpg" alt="กิจกรรมเทศบาลตำบลคุ้งสำเภา" class="card-real-img">
                         </div>
                         <div class="news-body">
-                            <div class="news-meta"><i class="fa-regular fa-calendar"></i> 24 กันยายน 2569 | โดย งานประชาสัมพันธ์</div>
-                            <h3 class="news-title">เทศบาลตำบลคุ้งสำเภา ขับเคลื่อนโครงการถนนคนเดินริมเจ้าพระยา กระตุ้นเศรษฐกิจฐานรากชุมชน</h3>
-                            <p class="news-excerpt">นายกเทศมนตรีตำบลคุ้งสำเภา นำทีมลงพื้นที่ตรวจความพร้อมโครงการพัฒนาพื้นที่ริมแม่น้ำเจ้าพระยาเพื่อส่งเสริมการท่องเที่ยวเชิงวัฒนธรรม...</p>
-                            <a href="#" class="news-readmore">อ่านรายละเอียด <i class="fa-solid fa-arrow-right"></i></a>
+                            <div class="news-meta"><i class="fa-regular fa-calendar"></i> กันยายน 2569 | โดย สำนักปลัดเทศบาล</div>
+                            <h3 class="news-title">เทศบาลตำบลคุ้งสำเภา จัดกิจกรรมและโครงการส่งเสริมคุณภาพชีวิตประชาชนในชุมชน</h3>
+                            <p class="news-excerpt">คณะผู้บริหารและเจ้าหน้าที่ลงพื้นที่ตรวจเยี่ยมและดำเนินกิจกรรมเพื่อประโยชน์สุขของพี่น้องประชาชนในเขตเทศบาลตำบลคุ้งสำเภา...</p>
+                            <a href="https://www.khungsumpao.go.th/pr%20normal.html" target="_blank" class="news-readmore">อ่านรายละเอียด <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <article class="news-card">
                         <div class="news-thumb">
-                            <div class="thumb-placeholder"><i class="fa-regular fa-image"></i></div>
+                            <span class="thumb-badge badge-blue">งานประปา</span>
+                            <img src="assets/images/banner_slide_1.jpg" alt="งานบริการน้ำประปา" class="card-real-img">
                         </div>
                         <div class="news-body">
-                            <div class="news-meta"><i class="fa-regular fa-calendar"></i> 22 กันยายน 2569 | โดย กองสาธารณสุขฯ</div>
-                            <h3 class="news-title">รณรงค์ฉีดวัคซีนป้องกันโรคพิษสุนัขบ้า และทำหมันสัตว์เลี้ยงฟรี ประจำปีงบประมาณ 2569</h3>
-                            <p class="news-excerpt">ขอเชิญประชาชนในเขตเทศบาลตำบลคุ้งสำเภานำสัตว์เลี้ยงเข้ารับบริการฉีดวัคซีนและทำหมัน ณ ศาลาประชาคมหมู่บ้าน...</p>
-                            <a href="#" class="news-readmore">อ่านรายละเอียด <i class="fa-solid fa-arrow-right"></i></a>
+                            <div class="news-meta"><i class="fa-regular fa-calendar"></i> กันยายน 2569 | โดย กองการประปา</div>
+                            <h3 class="news-title">ประชาสัมพันธ์ระบบประปาและแบบสอบถามความพึงพอใจในการให้บริการน้ำประปา</h3>
+                            <p class="news-excerpt">กองการประปา เทศบาลตำบลคุ้งสำเภา ขอเชิญร่วมตอบแบบสอบถามเพื่อนำข้อมูลมาพัฒนาคุณภาพและแรงดันน้ำประปาให้ดียิ่งขึ้น...</p>
+                            <a href="https://www.khungsumpao.go.th/pr%20ประปา.html" target="_blank" class="news-readmore">อ่านรายละเอียด <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <article class="news-card">
                         <div class="news-thumb">
-                            <div class="thumb-badge badge-green">ITA 2569</div>
-                            <div class="thumb-placeholder"><i class="fa-regular fa-image"></i></div>
+                            <span class="thumb-badge badge-green">ITA 2569</span>
+                            <img src="assets/images/no_gift_policy.jpg" alt="นโยบาย No Gift Policy" class="card-real-img">
                         </div>
                         <div class="news-body">
-                            <div class="news-meta"><i class="fa-regular fa-calendar"></i> 20 กันยายน 2569 | โดย สำนักปลัดเทศบาล</div>
-                            <h3 class="news-title">ประกาศเจตนารมณ์นโยบาย No Gift Policy ประจำปีงบประมาณ 2569 มุ่งสู่เทศบาลสุจริต</h3>
+                            <div class="news-meta"><i class="fa-regular fa-calendar"></i> กันยายน 2569 | โดย ศูนย์คุณธรรมและความโปร่งใส</div>
+                            <h3 class="news-title">ประกาศเจตนารมณ์นโยบาย No Gift Policy มุ่งสู่เทศบาลสุจริต โปร่งใส ตรวจสอบได้</h3>
                             <p class="news-excerpt">ผู้บริหาร ข้าราชการ และบุคลากรเทศบาลตำบลคุ้งสำเภา ร่วมลงนามแสดงเจตจำนงสุจริต งดรับ งดให้ของขวัญในทุกโอกาส...</p>
-                            <a href="#" class="news-readmore">อ่านรายละเอียด <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="#no-gift" class="news-readmore">อ่านรายละเอียด <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
                 </div>
             </div>
 
-            <!-- Tab 2: จัดซื้อจัดจ้าง -->
+            <!-- Tab 2: ภาพกิจกรรม -->
+            <div class="tab-content" id="tab-activity">
+                <div class="activity-gallery-grid">
+                    <div class="activity-photo-box">
+                        <img src="assets/images/banner_activity_1.jpg" alt="ภาพกิจกรรม 1">
+                        <div class="act-caption">ภาพกิจกรรมโครงการพัฒนาชุมชนเทศบาลตำบลคุ้งสำเภา</div>
+                    </div>
+                    <div class="activity-photo-box">
+                        <img src="assets/images/banner_slide_1.jpg" alt="ภาพกิจกรรม 2">
+                        <div class="act-caption">ภาพบรรยากาศการให้บริการประชาชนนอกสถานที่</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: จัดซื้อจัดจ้าง -->
             <div class="tab-content" id="tab-procure">
                 <div class="procure-table-card">
                     <table class="table-procure">
@@ -415,76 +487,44 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>23 ก.ย. 2569</td>
-                                <td>ประกวดราคาจ้างก่อสร้างปรับปรุงผิวจราจรแอสฟัลต์คอนกรีต หมู่ที่ 2 ด้วยวิธี e-Bidding</td>
+                                <td>24 ก.ย. 2569</td>
+                                <td>ประกวดราคาจ้างก่อสร้างปรับปรุงผิวจราจรแอสฟัลต์คอนกรีต ด้วยวิธี e-Bidding</td>
                                 <td>1,450,000.00</td>
-                                <td><a href="#" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> ดาวน์โหลด TOR</a></td>
+                                <td><a href="https://www.khungsumpao.go.th/buy.html" target="_blank" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> ดาวน์โหลด TOR</a></td>
                             </tr>
                             <tr>
-                                <td>21 ก.ย. 2569</td>
-                                <td>ประกาศผู้ชนะการเสนอราคา ซื้อวัสดุการเกษตรและปรับปรุงภูมิทัศน์ริมน้ำเจ้าพระยา</td>
+                                <td>20 ก.ย. 2569</td>
+                                <td>ประกาศผู้ชนะการเสนอราคา ซื้อวัสดุอุปกรณ์ปรับปรุงภูมิทัศน์และสิ่งแวดล้อม</td>
                                 <td>185,000.00</td>
-                                <td><a href="#" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> รายละเอียด</a></td>
+                                <td><a href="https://www.khungsumpao.go.th/buy.html" target="_blank" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> รายละเอียด</a></td>
                             </tr>
-                            <tr>
-                                <td>18 ก.ย. 2569</td>
-                                <td>สรุปผลการดำเนินการจัดซื้อจัดจ้างในรอบเดือน สิงหาคม 2569 (แบบ สขร.1)</td>
-                                <td>-</td>
-                                <td><a href="#" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> สขร.1 (PDF)</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Tab 3: ประกาศเทศบาล -->
-            <div class="tab-content" id="tab-announce">
-                <div class="procure-table-card">
-                    <table class="table-procure">
-                        <thead>
-                            <tr>
-                                <th>วันที่ประกาศ</th>
-                                <th>หัวข้อประกาศเทศบาล</th>
-                                <th>หน่วยงานที่ออกประกาศ</th>
-                                <th>ดาวน์โหลด</th>
-                            </tr>
-                        </thead>
-                        <tbody>
                             <tr>
                                 <td>15 ก.ย. 2569</td>
-                                <td>ประกาศกำหนดวัน เวลา และสถานที่จัดเก็บภาษีที่ดินและสิ่งปลูกสร้าง ประจำปี พ.ศ. 2570</td>
-                                <td>กองคลัง</td>
-                                <td><a href="#" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> ประกาศ (PDF)</a></td>
-                            </tr>
-                            <tr>
-                                <td>10 ก.ย. 2569</td>
-                                <td>ประกาศมาตรการประหยัดพลังงานและการใช้ทรัพยากรอย่างคุ้มค่าภายในสำนักงานเทศบาล</td>
-                                <td>สำนักปลัดเทศบาล</td>
-                                <td><a href="#" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> เอกสาร (PDF)</a></td>
+                                <td>สรุปผลการดำเนินการจัดซื้อจัดจ้างในรอบเดือน (แบบ สขร.1) ประจำปี 2569</td>
+                                <td>-</td>
+                                <td><a href="https://www.khungsumpao.go.th/buy.html" target="_blank" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> สขร.1 (PDF)</a></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- Tab 4: รับสมัครงาน -->
-            <div class="tab-content" id="tab-jobs">
+            <!-- Tab 4: กิจการสภาเทศบาล -->
+            <div class="tab-content" id="tab-council">
                 <div class="procure-table-card">
                     <table class="table-procure">
                         <thead>
                             <tr>
-                                <th>วันที่ประกาศ</th>
-                                <th>ตำแหน่งที่เปิดรับสมัคร</th>
-                                <th>จำนวนอัตรา</th>
-                                <th>รายละเอียด</th>
+                                <th>วันที่</th>
+                                <th>หัวข้อประกาศงานกิจการสภาเทศบาล</th>
+                                <th>เอกสาร</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>19 ก.ย. 2569</td>
-                                <td>รับสมัครบุคคลเพื่อเลือกสรรเป็นพนักงานจ้าง ตำแหน่ง ผู้ช่วยนายช่างโยธา</td>
-                                <td>1 อัตรา</td>
-                                <td><a href="#" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> ประกาศรับสมัคร</a></td>
+                                <td>กันยายน 2569</td>
+                                <td>ประกาศสภาเทศบาลตำบลคุ้งสำเภา เรื่อง เรียกประชุมสภาเทศบาล สมัยสามัญ</td>
+                                <td><a href="https://www.khungsumpao.go.th/council%20pr.html" target="_blank" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> ดูประกาศ</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -492,12 +532,12 @@
             </div>
 
             <div class="view-all-row">
-                <a href="#all-news" class="btn btn-outline-dark"><i class="fa-solid fa-list-ul"></i> ดูข่าวสารและประกาศทั้งหมด</a>
+                <a href="https://www.khungsumpao.go.th/public%20relations.html" target="_blank" class="btn btn-outline-dark"><i class="fa-solid fa-list-ul"></i> ดูข่าวสารและประกาศทั้งหมดในระบบเดิม</a>
             </div>
         </div>
     </section>
 
-    <!-- 9. Heritage & Riverside Community Spotlight (อัตลักษณ์คุ้งสำเภา) -->
+    <!-- 10. Heritage & Riverside Community Spotlight (อัตลักษณ์คุ้งสำเภา) -->
     <section class="section-heritage">
         <div class="container">
             <div class="heritage-card">
@@ -506,16 +546,17 @@
                     <h2>คุ้งสำเภา: มนต์เสน่ห์เมืองท่าการค้าโบราณริมน้ำเจ้าพระยา</h2>
                     <p>เทศบาลตำบลคุ้งสำเภา ตั้งอยู่ริมคุ้งแม่น้ำเจ้าพระยา อำเภอมโนรมย์ จังหวัดชัยนาท มีประวัติศาสตร์อันยาวนานตั้งแต่สมัยกรุงศรีอยุธยาและรัตนโกสินทร์ตอนต้น ในฐานะจุดจอดพักเรือสำเภาสินค้า ปัจจุบันได้รับการสืบสานเป็นแหล่งท่องเที่ยวทางประวัติศาสตร์ ตลาดชุมชนโบราณ และวิถีชีวิตชาวริมน้ำอันสงบงาม</p>
                     <div class="heritage-highlights">
-                        <div class="h-badge"><i class="fa-solid fa-shop"></i> ถนนคนเดินคุ้งสำเภา</div>
-                        <div class="h-badge"><i class="fa-solid fa-camera"></i> จุดชมวิวริมแม่น้ำเจ้าพระยา</div>
-                        <div class="h-badge"><i class="fa-solid fa-utensils"></i> อาหารพื้นบ้านรสเด็ดมโนรมย์</div>
+                        <a href="https://www.khungsumpao.go.th/tourist_attractions_with_images.html" target="_blank" class="h-badge"><i class="fa-solid fa-shop"></i> ถนนคนเดินคุ้งสำเภา</a>
+                        <a href="https://www.khungsumpao.go.th/files_notice/ฐานข้อมููลภูมิปัญญาท้องถิ่นเทศบาล68.pdf" target="_blank" class="h-badge"><i class="fa-solid fa-book"></i> ฐานข้อมูลภูมิปัญญาท้องถิ่น 2568</a>
+                        <a href="https://www.khungsumpao.go.th/files_notice/ฐานข้อมูลตลาด.pdf" target="_blank" class="h-badge"><i class="fa-solid fa-basket-shopping"></i> ฐานข้อมูลตลาดชุมชน</a>
+                        <a href="https://www.khungsumpao.go.th/files_notice/ข้อมูลลานกีฬา.pdf" target="_blank" class="h-badge"><i class="fa-solid fa-volleyball"></i> ลานกีฬา/สนามกีฬา</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 10. AI Civic Assistant Widget ("น้องสำเภา AI" ผู้ช่วยอัจฉริยะ) -->
+    <!-- 11. AI Civic Assistant Widget ("น้องสำเภา AI" ผู้ช่วยอัจฉริยะ) -->
     <div class="ai-widget-wrapper" id="aiWidget">
         <div class="ai-chat-window" id="aiChatWindow">
             <div class="ai-chat-header">
@@ -531,9 +572,10 @@
                     <p>สวัสดีครับ! ผมคือ <strong>น้องสำเภา AI</strong> ผู้ช่วยอัจฉริยะ ยินดีให้ข้อมูลบริการประชาชน นโยบาย ITA หรือค้นหาเอกสารราชการครับ วันนี้มีอะไรให้ผมช่วยไหมครับ?</p>
                 </div>
                 <div class="ai-chips">
+                    <button class="chip" data-query="ขอน้ำประปา">💧 คำร้องขอน้ำประปา</button>
                     <button class="chip" data-query="ขั้นตอนยื่นคำร้องทุกข์">📢 ร้องเรียนร้องทุกข์</button>
-                    <button class="chip" data-query="ชำระภาษีที่ดิน">💰 ชำระภาษีท้องถิ่น</button>
-                    <button class="chip" data-query="นโยบาย No Gift Policy">🛡️ ข้อมูล ITA</button>
+                    <button class="chip" data-query="ชำระภาษีที่ดิน">💰 ยื่นแบบชำระภาษี</button>
+                    <button class="chip" data-query="นโยบาย No Gift Policy">🛡️ นโยบาย No Gift Policy</button>
                     <button class="chip" data-query="เบอร์โทรติดต่อ">📞 เบอร์โทรเทศบาล</button>
                 </div>
             </div>
@@ -548,16 +590,19 @@
         </button>
     </div>
 
-    <!-- 11. Official Footer (มาตรฐานเว็บไซต์หน่วยงานรัฐตาม พ.ร.บ. ข้อมูลข่าวสาร & PDPA) -->
+    <!-- 12. Official Footer (มาตรฐานเว็บไซต์หน่วยงานรัฐตาม พ.ร.บ. ข้อมูลข่าวสาร & PDPA) -->
     <footer class="main-footer" id="contact">
         <div class="container footer-grid">
-            <!-- Col 1: Contact Info -->
+            <!-- Col 1: Contact Info with Official Logo -->
             <div class="footer-col">
                 <div class="footer-logo">
-                    <div class="emblem-mini"><i class="fa-solid fa-ship"></i></div>
-                    <h3>เทศบาลตำบลคุ้งสำเภา</h3>
+                    <img src="assets/images/logo.png" alt="โลโก้เทศบาลตำบลคุ้งสำเภา" class="footer-logo-img">
+                    <div>
+                        <h3>เทศบาลตำบลคุ้งสำเภา</h3>
+                        <span class="footer-sub">อ.มโนรมย์ จ.ชัยนาท</span>
+                    </div>
                 </div>
-                <p class="footer-text">องค์กรปกครองส่วนท้องถิ่น ยึดมั่นธรรมาภิบาล พัฒนาคุณภาพชีวิต เพื่อประโยชน์สุขของประชาชน</p>
+                <p class="footer-text">องค์กรปกครองส่วนท้องถิ่น มุ่งมั่นธรรมาภิบาล คุณภาพชีวิตได้มาตรฐาน ระบบราชการ 4.0 เพื่อประโยชน์สุขของประชาชน</p>
                 <div class="contact-details">
                     <p><i class="fa-solid fa-location-dot"></i> หมู่ 4 ถนนชัยนาท-มโนรมย์ ตำบลคุ้งสำเภา อำเภอมโนรมย์ จังหวัดชัยนาท 17110</p>
                     <p><i class="fa-solid fa-phone"></i> โทรศัพท์: 056-491-325</p>
@@ -571,10 +616,11 @@
                 <h4 class="footer-heading">หมวดข้อมูลสำคัญ (ITA / LPA)</h4>
                 <ul class="footer-links">
                     <li><a href="#no-gift"><i class="fa-solid fa-chevron-right"></i> นโยบาย No Gift Policy</a></li>
-                    <li><a href="#plans"><i class="fa-solid fa-chevron-right"></i> แผนพัฒนาท้องถิ่นและรายงานประจำปี</a></li>
-                    <li><a href="#procure"><i class="fa-solid fa-chevron-right"></i> สรุปผลจัดซื้อจัดจ้าง (สขร.1)</a></li>
-                    <li><a href="#whistleblower"><i class="fa-solid fa-chevron-right"></i> ศูนย์รับเรื่องทุจริตและประพฤติมิชอบ</a></li>
-                    <li><a href="#welfare"><i class="fa-solid fa-chevron-right"></i> ลงทะเบียนสิทธิสวัสดิการชุมชน</a></li>
+                    <li><a href="https://www.khungsumpao.go.th/Development%20plan.html" target="_blank"><i class="fa-solid fa-chevron-right"></i> แผนพัฒนาเทศบาลและแผนประจำปี</a></li>
+                    <li><a href="https://www.khungsumpao.go.th/buy.html" target="_blank"><i class="fa-solid fa-chevron-right"></i> สรุปผลจัดซื้อจัดจ้าง (สขร.1)</a></li>
+                    <li><a href="https://www.khungsumpao.go.th/จนท.ทุจริต/complaint_form.html" target="_blank"><i class="fa-solid fa-chevron-right"></i> ศูนย์รับเรื่องทุจริตและประพฤติมิชอบ</a></li>
+                    <li><a href="https://www.khungsumpao.go.th/code%20of%20ethics.html" target="_blank"><i class="fa-solid fa-chevron-right"></i> ประมวลจริยธรรมสำหรับเจ้าหน้าที่</a></li>
+                    <li><a href="https://khungsumpao.c.eoffice.go.th/portal/" target="_blank"><i class="fa-solid fa-chevron-right"></i> ระบบสารบรรณอิเล็กทรอนิกส์ e-Office</a></li>
                 </ul>
             </div>
 
@@ -585,21 +631,21 @@
                     <li><a href="#"><i class="fa-solid fa-chevron-right"></i> นโยบายการคุ้มครองข้อมูลส่วนบุคคล (PDPA)</a></li>
                     <li><a href="#"><i class="fa-solid fa-chevron-right"></i> นโยบายการใช้งานคุกกี้ (Cookie Policy)</a></li>
                     <li><a href="#"><i class="fa-solid fa-chevron-right"></i> นโยบายความมั่นคงปลอดภัยเว็บไซต์</a></li>
-                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> มาตรฐานการเข้าถึงเว็บไซต์ของคนพิการ</a></li>
+                    <li><a href="https://www.khungsumpao.go.th/พรบ.elec.html" target="_blank"><i class="fa-solid fa-chevron-right"></i> พ.ร.บ.การปฏิบัติราชการทางอิเล็กทรอนิกส์</a></li>
                 </ul>
                 <div class="social-links">
-                    <a href="https://facebook.com" target="_blank" title="Facebook เทศบาล"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" title="Facebook เทศบาลตำบลคุ้งสำเภา"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" title="LINE Official"><i class="fa-brands fa-line"></i></a>
                     <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
 
-            <!-- Col 4: Location Map & Counter -->
+            <!-- Col 4: Official QR Code & Visitor Stats -->
             <div class="footer-col">
-                <h4 class="footer-heading">แผนที่ที่ตั้งสำนักงาน</h4>
-                <div class="map-placeholder">
-                    <i class="fa-solid fa-map-location-dot"></i>
-                    <span>อ.มโนรมย์ จ.ชัยนาท 17110</span>
+                <h4 class="footer-heading">ช่องทางติดต่อ & QR Code</h4>
+                <div class="qrcode-wrapper">
+                    <img src="assets/images/qrcode_contact.jpg" alt="QR Code ติดต่อเทศบาลตำบลคุ้งสำเภา" class="qrcode-img">
+                    <span class="qrcode-desc">สแกนเพื่อติดต่อเทศบาลตำบลคุ้งสำเภา</span>
                 </div>
                 <div class="visitor-counter">
                     <span><i class="fa-solid fa-users-viewfinder"></i> สถิติผู้เข้าชม: <strong>142,850</strong> ครั้ง</span>

@@ -153,3 +153,169 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+
+/* ========================================================
+   PDPA COOKIE CONSENT & PREFERENCES CONTROLLER
+   (พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562)
+   ======================================================== */
+(function initPDPA() {
+    const STORAGE_KEY = 'khungsumpao_pdpa_consent_v1';
+    const banner = document.getElementById('pdpa-banner');
+    const modal = document.getElementById('pdpa-modal');
+    const floatingTrigger = document.getElementById('pdpa-floating-trigger');
+
+    const btnAcceptAll = document.getElementById('btn-pdpa-accept-all');
+    const btnReject = document.getElementById('btn-pdpa-reject');
+    const btnOpenSettings = document.getElementById('btn-pdpa-open-settings');
+    const btnCloseModal = document.getElementById('btn-pdpa-close-modal');
+    const btnSavePreferences = document.getElementById('btn-pdpa-save-preferences');
+    const btnAcceptAllModal = document.getElementById('btn-pdpa-accept-all-modal');
+
+    const chkAnalytics = document.getElementById('cookie-analytics');
+    const chkFunctional = document.getElementById('cookie-functional');
+    const chkMedia = document.getElementById('cookie-media');
+
+    function getConsent() {
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            return raw ? JSON.parse(raw) : null;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function saveConsent(consentObj) {
+        try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(consentObj));
+            // Also store lightweight cookie for server side inspection
+            document.cookie = `khungsumpao_pdpa=${consentObj.analytics ? '1' : '0'}${consentObj.functional ? '1' : '0'}${consentObj.media ? '1' : '0'}; path=/; max-age=31536000; SameSite=Lax`;
+        } catch (e) {
+            console.warn('Unable to persist PDPA consent:', e);
+        }
+        hideBanner();
+        hideModal();
+    }
+
+    function showBanner() {
+        if (banner) {
+            banner.classList.add('active');
+        }
+    }
+
+    function hideBanner() {
+        if (banner) {
+            banner.classList.remove('active');
+        }
+    }
+
+    function showModal() {
+        const consent = getConsent();
+        if (consent) {
+            if (chkAnalytics) chkAnalytics.checked = !!consent.analytics;
+            if (chkFunctional) chkFunctional.checked = !!consent.functional;
+            if (chkMedia) chkMedia.checked = !!consent.media;
+        }
+        if (modal) {
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+        }
+    }
+
+    function hideModal() {
+        if (modal) {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+        }
+    }
+
+    // Event Listeners
+    if (btnAcceptAll) {
+        btnAcceptAll.addEventListener('click', () => {
+            saveConsent({
+                necessary: true,
+                analytics: true,
+                functional: true,
+                media: true,
+                timestamp: new Date().toISOString()
+            });
+        });
+    }
+
+    if (btnReject) {
+        btnReject.addEventListener('click', () => {
+            saveConsent({
+                necessary: true,
+                analytics: false,
+                functional: false,
+                media: false,
+                timestamp: new Date().toISOString()
+            });
+        });
+    }
+
+    if (btnOpenSettings) {
+        btnOpenSettings.addEventListener('click', () => {
+            showModal();
+        });
+    }
+
+    if (floatingTrigger) {
+        floatingTrigger.addEventListener('click', () => {
+            showModal();
+        });
+    }
+
+    if (btnCloseModal) {
+        btnCloseModal.addEventListener('click', () => {
+            hideModal();
+        });
+    }
+
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                hideModal();
+            }
+        });
+    }
+
+    // ESC key closes modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+            hideModal();
+        }
+    });
+
+    if (btnSavePreferences) {
+        btnSavePreferences.addEventListener('click', () => {
+            saveConsent({
+                necessary: true,
+                analytics: chkAnalytics ? chkAnalytics.checked : false,
+                functional: chkFunctional ? chkFunctional.checked : false,
+                media: chkMedia ? chkMedia.checked : false,
+                timestamp: new Date().toISOString()
+            });
+        });
+    }
+
+    if (btnAcceptAllModal) {
+        btnAcceptAllModal.addEventListener('click', () => {
+            saveConsent({
+                necessary: true,
+                analytics: true,
+                functional: true,
+                media: true,
+                timestamp: new Date().toISOString()
+            });
+        });
+    }
+
+    // Auto-display banner if no consent stored yet
+    document.addEventListener('DOMContentLoaded', () => {
+        const consent = getConsent();
+        if (!consent) {
+            setTimeout(showBanner, 800);
+        }
+    });
+})();

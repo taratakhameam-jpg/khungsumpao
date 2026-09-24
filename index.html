@@ -608,39 +608,58 @@
         </div>
     </section>
 
-    <!-- 11. AI Civic Assistant Widget ("น้องสำเภา AI" ผู้ช่วยอัจฉริยะ) -->
+        <!-- 11. Cute Nong Sumpao AI Civic Assistant Widget (น้องสำเภา AI เรือสำเภาน้อย) -->
     <div class="ai-widget-wrapper" id="aiWidget">
-        <div class="ai-chat-window" id="aiChatWindow">
+        <!-- AI Chat Window -->
+        <div class="ai-chat-window" id="aiChatWindow" aria-hidden="true">
             <div class="ai-chat-header">
-                <div class="ai-avatar"><i class="fa-solid fa-robot"></i></div>
-                <div class="ai-header-info">
-                    <h4>น้องสำเภา AI (Civic Assistant)</h4>
-                    <span>ผู้ช่วยอัจฉริยะเทศบาลตำบลคุ้งสำเภา</span>
+                <div class="ai-header-profile">
+                    <div class="ai-mascot-avatar">
+                        <img src="assets/images/nong_sumpao_mascot.png" alt="น้องสำเภา AI เรือสำเภาน้อย">
+                        <span class="ai-online-indicator"></span>
+                    </div>
+                    <div class="ai-header-info">
+                        <h4 style="margin:0; font-size:1.02rem; font-weight:700; color:#fff;">น้องสำเภา AI</h4>
+                        <span style="font-size:0.75rem; color:var(--gold-light);"><i class="fa-solid fa-circle" style="color:#10b981; font-size:0.6rem;"></i> ผู้ช่วยอัจฉริยะเทศบาลตำบลคุ้งสำเภา</span>
+                    </div>
                 </div>
-                <button class="ai-close-btn" id="aiCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+                <button class="ai-close-btn" id="aiCloseBtn" aria-label="ปิดหน้าต่าง">&times;</button>
             </div>
             <div class="ai-chat-body" id="aiChatBody">
                 <div class="ai-msg bot">
-                    <p>สวัสดีครับ! ผมคือ <strong>น้องสำเภา AI</strong> ผู้ช่วยอัจฉริยะ ยินดีให้ข้อมูลบริการประชาชน นโยบาย ITA หรือค้นหาเอกสารราชการครับ วันนี้มีอะไรให้ผมช่วยไหมครับ?</p>
+                    <div class="ai-msg-avatar">
+                        <img src="assets/images/nong_sumpao_mascot.png" alt="น้องสำเภา">
+                    </div>
+                    <div class="ai-msg-bubble">
+                        <p>สวัสดีครับ! ผมคือ <strong>"น้องสำเภา AI"</strong> เรือสำเภาน้อยผู้ช่วยอัจฉริยะประจำเทศบาลตำบลคุ้งสำเภา มีข้อสงสัยเรื่องขอน้ำประปา ชำระภาษี ร้องเรียน หรือบริการ e-Service สอบถามผมได้เลยครับ!</p>
+                    </div>
                 </div>
                 <div class="ai-chips">
-                    <button class="chip" data-query="ขอน้ำประปา">💧 คำร้องขอน้ำประปา</button>
-                    <button class="chip" data-query="ขั้นตอนยื่นคำร้องทุกข์">📢 ร้องเรียนร้องทุกข์</button>
-                    <button class="chip" data-query="ชำระภาษีที่ดิน">💰 ยื่นแบบชำระภาษี</button>
-                    <button class="chip" data-query="นโยบาย No Gift Policy">🛡️ นโยบาย No Gift Policy</button>
-                    <button class="chip" data-query="เบอร์โทรติดต่อ">📞 เบอร์โทรเทศบาล</button>
+                    <button class="chip" data-query="ขอน้ำประปา">🚰 ขอน้ำประปาออนไลน์</button>
+                    <button class="chip" data-query="ร้องเรียนร้องทุกข์">📢 แจ้งเรื่องร้องเรียน</button>
+                    <button class="chip" data-query="ชำระภาษี">💰 ชำระภาษีท้องถิ่น</button>
+                    <button class="chip" data-query="No Gift Policy">🛡️ นโยบาย No Gift</button>
+                    <button class="chip" data-query="ติดต่อเทศบาล">📞 เบอร์ติดต่อทุกกอง</button>
                 </div>
             </div>
             <div class="ai-chat-footer">
-                <input type="text" id="aiInput" placeholder="พิมพ์คำถาม หรือเรื่องที่ต้องการติดต่อ...">
-                <button id="aiSendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+                <input type="text" id="aiInput" placeholder="พิมพ์คำถามของคุณที่นี่..." aria-label="พิมพ์ข้อความ">
+                <button type="button" id="aiSendBtn" aria-label="ส่งข้อความ"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
         </div>
-        <button class="ai-fab" id="aiFab" title="ปรึกษาน้องสำเภา AI">
-            <i class="fa-solid fa-comment-dots"></i>
-            <span class="ai-fab-label">น้องสำเภา AI</span>
+
+        <!-- Cute Round Mascot Floating Action Button (FAB) -->
+        <button class="ai-round-mascot-fab" id="aiFab" title="พูดคุยกับน้องสำเภา AI" aria-label="น้องสำเภา AI ผู้ช่วยอัจฉริยะ">
+            <div class="ai-mascot-img-wrap">
+                <img src="assets/images/nong_sumpao_mascot.png" alt="น้องสำเภา AI" class="nong-sumpao-img">
+                <span class="ai-pulse-ring"></span>
+                <span class="ai-live-badge">AI</span>
+            </div>
+            <span class="ai-fab-tooltip">คุยกับน้องสำเภา AI ⛵</span>
         </button>
     </div>
+
+
 
     <!-- 12. Official Footer (มาตรฐานเว็บไซต์หน่วยงานรัฐตาม พ.ร.บ. ข้อมูลข่าวสาร & PDPA) -->
     <footer class="main-footer" id="contact">

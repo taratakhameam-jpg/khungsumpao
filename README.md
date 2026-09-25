@@ -1,6 +1,30 @@
-# เทศบาลตำบลคุ้งสำเภา | อำเภอมโนรมย์ จังหวัดชัยนาท (Official Portal Mockup)
+# 🏛️ เทศบาลตำบลคุ้งสำเภา | อำเภอมโนรมย์ จังหวัดชัยนาท (Official Civic Portal 4.0)
 
-โครงร่างเว็บไซต์ทางการเทศบาลตำบลคุ้งสำเภา อำเภอมโนรมย์ จังหวัดชัยนาท ออกแบบตามเกณฑ์มาตรฐานเว็บไซต์หน่วยงานภาครัฐ ยึดมั่นตามเกณฑ์การประเมิน **ITA (Integrity and Transparency Assessment)** และ **LPA (Local Performance Assessment)** ในธีม **Modern Civic Editorial & Warm Gold Sapphire** หรูหรา ทันสมัย และสง่างาม
+> เว็บไซต์ทางการเทศบาลตำบลคุ้งสำเภา อำเภอมโนรมย์ จังหวัดชัยนาท ออกแบบตามเกณฑ์มาตรฐานเว็บไซต์หน่วยงานภาครัฐ ยึดมั่นตามเกณฑ์การประเมิน **ITA (Integrity and Transparency Assessment)**, **LPA (Local Performance Assessment)**, และมาตรฐาน **WCAG 2.1 AA / PDPA** ในธีม **Modern Civic Editorial & Warm Gold Sapphire** หรูหรา ทันสมัย และสง่างาม
+
+🌐 **เข้าชมเว็บไซต์จริง (Live Production)**: 👉 **[https://taratakhameam-jpg.github.io/khungsumpao/](https://taratakhameam-jpg.github.io/khungsumpao/)**
+
+---
+
+## 📚 เอกสารสำคัญสำหรับนักพัฒนา & โมเดล AI (Handover & Guides)
+
+- 📘 **[PROJECT_HANDOVER.md](./PROJECT_HANDOVER.md)**: **คู่มือส่งต่องานฉบับสมบูรณ์สำหรับ AI (ChatGPT / GPT-4, Claude, Gemini) และ Developers** รวบรวมขอบเขตระบบ, ขอบเขตความปลอดภัย (ห้ามแตะไดรฟ์ Y:), บันทึกประวัติการพัฒนาตั้งแต่ก้าวแรก, และโครงสร้างไฟล์ทั้ง 10 หน้า
+- 📗 **[REUSABLE_GUIDE.md](./REUSABLE_GUIDE.md)**: **คู่มือการนำโครงสร้างไป Rebrand & ขายต่อ อปท. อื่นๆ ภายใน 10 นาที** (White-Label Architecture) โดยแก้ไขเพียง `assets/js/civic-config.js`
+
+---
+
+## 📄 โครงสร้างหน้าเว็บทั้ง 10 หน้า (All 10 Pages)
+
+1. **`index.html`**: หน้าหลัก รวมจุดเด่น สารนายกฯ และระบบบริการ e-Service Portal
+2. **`about.html`**: เกี่ยวกับเทศบาลตำบลคุ้งสำเภา ประวัติ วิสัยทัศน์ และอำนาจหน้าที่
+3. **`council.html`**: คณะผู้บริหารและสมาชิกสภาเทศบาลตำบลคุ้งสำเภา
+4. **`structure.html`**: โครงสร้างส่วนราชการ 7 กอง/สำนัก
+5. **`eservice.html`**: ศูนย์บริการประชาชนออนไลน์ 24 ชม. (ขอน้ำประปา, ภาษี, ขอใช้สถานที่)
+6. **`news.html`**: คลังข่าวสารประชาสัมพันธ์และภาพกิจกรรม
+7. **`news-detail.html`**: หน้ารายละเอียดข่าวสารและเอกสารแนบ
+8. **`procurement.html`**: ประกาศจัดซื้อจัดจ้างภาครัฐ (e-GP) และสรุปผล สขร.1
+9. **`ita.html`**: ศูนย์ข้อมูลความโปร่งใส ITA (OIT O1-O43) และนโยบาย No Gift Policy
+10. **`contact.html`**: ช่องทางติดต่อเทศบาล แผนที่ และศูนย์รับเรื่องร้องเรียน 24 ชม.
 
 ---
 
@@ -23,23 +47,27 @@
   - ระบบจองคิวติดต่อราชการล่วงหน้า
 
 ### 3. มาตรฐานการเข้าถึงของรัฐ (Web Accessibility & Compliance)
-- **แถบเครื่องมือสำหรับผู้สูงอายุและผู้พิการ**:
+- **แถบเครื่องมือสำหรับผู้สูงอายุและผู้พิการ (WCAG 2.1 AA)**:
   - ปรับขนาดตัวอักษร 3 ระดับ (A-, A, A+)
   - โหมดคอนทราสต์สูง (High Contrast Mode)
   - โหมดถวายความอาลัย (Monochrome / Grayscale Mode)
 - **คุ้มครองข้อมูลส่วนบุคคล (PDPA)**:
-  - ลิงก์นโยบายคุ้มครองข้อมูลส่วนบุคคล, นโยบายคุกกี้, และนโยบายความมั่นคงปลอดภัยเว็บไซต์
+  - ระบบแจ้งเตือนคุกกี้ (Cookie Banner & Modal) และลิงก์นโยบายคุ้มครองข้อมูลส่วนบุคคล
 
 ### 4. นวัตกรรม AI-First Civic Integration
 - **น้องสำเภา AI (Civic Assistant Widget)**:
-  - วิดเจ็ตผู้ช่วยประชาชนอัจฉริยะลอยมุมขวาล่าง
-  - ให้ข้อมูลบริการ e-Service, แนะนำเกณฑ์ ITA, และขั้นตอนติดต่อเทศบาล
+  - มาสคอตทรงกลม 3D สไตล์ Chibi เรือสำเภาน้อย ลอยมุมขวาล่าง
+  - วงแหวนพลังงานสีทองพัลส์เบาๆ พร้อมป้ายสถานะ `AI` สีเขียวสดใส
+  - หน้าต่างแชทอัจฉริยะ ตอบคำถามเรื่องขอน้ำประปา ภาษี ITA และช่องทางติดต่อเทศบาล 24 ชม.
 
 ---
 
-## 🚀 วิธีการเปิดใช้งานบน GitHub Pages
+## 🚀 สรุปขั้นตอนการ Deploy & อัปเดตงานบน GitHub
 
-1. สั่ง Push โค้ดทั้งหมดขึ้น GitHub Repository: `taratakhamraem-jpg/khungsumpao`
-2. ไปที่ **Settings** -> **Pages**
-3. เลือก Source เป็น Branch **main** และบันทึก
-4. รับ URL ทางการ: `https://taratakhamraem-jpg.github.io/khungsumpao/`
+```powershell
+cd D:\khungsumpao
+git add .
+git commit -m "อัปเดตรายละเอียดงาน"
+git push origin main
+```
+เมื่อคำสั่งเสร็จสิ้น GitHub Pages จะทำการ Build และอัปเดตเว็บให้อัตโนมัติทันที
